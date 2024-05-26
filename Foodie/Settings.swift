@@ -99,7 +99,7 @@ struct Settings: View {
                             passwordIsEmpty = true
                         }
                         
-                        
+                        isInputEmpty = emailIsEmpty && loginIsEmpty && passwordIsEmpty
                         showAlert = true
                         email = ""
                         login = ""
