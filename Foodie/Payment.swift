@@ -26,7 +26,6 @@ struct Payment: View {
     }
     var body: some View {
         NavigationView {
-            
             ScrollView() {
                 VStack {
                     Picker(selection: $selectedIndex, label :Text("")) {
@@ -35,7 +34,6 @@ struct Payment: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
-                
                 ZStack {
                     if selectedIndex == 0 {
                         if #available(iOS 15.0, *) {
@@ -45,15 +43,19 @@ struct Payment: View {
                         }
                     }
                 }
-                
+                Spacer()
+                    .frame(height: 20)
                 DatePicker("Delivery time", selection: $deliveryDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
-                
+                Spacer()
+                    .frame(height: 20)
                 Map(coordinateRegion: $region, showsUserLocation: true)
                     .onAppear{
                        // ContentViewModel.checkIfLocationServicesIsEnabled()
                     }
                     .frame(width:300, height:300)
+                Spacer()
+                    .frame(height: 20)
                 if #available(iOS 15.0, *) {
                     TextField("Comment", text: $comment)
                         .padding()

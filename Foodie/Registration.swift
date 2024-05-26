@@ -119,7 +119,7 @@ struct Registration: View {
                             .foregroundColor(.white)
                             .bold()                    }
                 }
-                .frame(width: 200, height: 35)
+                .frame(width: 200, height: 40)
                 
             }
         }        .padding()

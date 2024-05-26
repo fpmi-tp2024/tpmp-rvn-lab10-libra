@@ -39,7 +39,7 @@ struct Settings: View {
                     Toggle(isOn: $isDarkTheme) {
                         Text("Dark theme")
                     }
-                }
+                }.frame(width: 350)
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Login")
                         .font(.headline)
@@ -49,7 +49,7 @@ struct Settings: View {
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
 
-                }
+                }.frame(width: 350)
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Email")
                         .font(.headline)
@@ -59,7 +59,7 @@ struct Settings: View {
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
 
-                }
+                }.frame(width: 350)
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Password")
                         .font(.headline)
@@ -69,7 +69,7 @@ struct Settings: View {
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
 
-                }
+                }.frame(width: 350)
                 Spacer()
                     Button {
                         if (!login.isEmpty) {
@@ -122,7 +122,8 @@ struct Settings: View {
                             }
                 }
             }
-            .padding()
+            //.padding()
+            
         }
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }

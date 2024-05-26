@@ -72,7 +72,7 @@ struct Login: View {
                             .bold()
                     }
                 }
-                .frame(width: 200, height: 35)
+                .frame(width: 200, height: 40)
             }
         }
         .padding()
