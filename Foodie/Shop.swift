@@ -28,9 +28,9 @@ struct Shop: View {
         
             VStack(spacing: 5) {
             SearchView(searchText: $searchText)
-                .frame(height:50)
+                //.frame(height:20)
                 .padding(.horizontal)
-            
+            Spacer()
             ScrollView() {
                 LazyVGrid(columns: columns, spacing: 30) {
                     ForEach(0..<filteredItems.count, id:\.self) { item in
@@ -83,6 +83,7 @@ struct SearchView : View {
                 .foregroundColor(.gray)
             TextField("Search", text :$searchText)
                 .foregroundColor(.black)
+                .frame(height:50)
             Button(action: {
                 searchText = ""
             }) {
