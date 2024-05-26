@@ -5,7 +5,7 @@ import SwiftUI
 import CryptoKit
 
 struct SecureTextField: View {
-        @State private var isSecureField: Bool = true
+    @State private var isSecureField: Bool = true
     @Binding var text: String
     var body: some View {
         if #available(iOS 15.0, *) {
@@ -32,15 +32,6 @@ struct SecureTextField: View {
     }
         
     }
-
-func sha256(_ input: String) -> String {
-    let inputData = Data(input.utf8)
-    let hashedData = try! SHA256.hash(data: inputData)
-    let hashString = hashedData.compactMap {
-        String(format: "%02x", $0)
-    }.joined()
-    return hashString
-}
 
 struct Registration: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
@@ -106,7 +97,7 @@ struct Registration: View {
                         
                         UserDefaults.standard.setValue(email, forKey: "email")
                         UserDefaults.standard.setValue(login, forKey: "login")
-                        UserDefaults.standard.setValue(sha256(password), forKey: "password")
+                        UserDefaults.standard.setValue(password, forKey: "password")
                         isInputValid = true
                         showAlert = false
                         

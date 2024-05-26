@@ -48,7 +48,7 @@ struct Login: View {
                 Button(action: {
                     if (!login.isEmpty && !password.isEmpty &&
                         (UserDefaults.standard.value(forKey: "login") != nil) && (UserDefaults.standard.value(forKey: "password") != nil) &&
-                        (UserDefaults.standard.value(forKey: "login") as! String == login) && (UserDefaults.standard.value(forKey: "password") as! String == sha256(password))) {
+                        (UserDefaults.standard.value(forKey: "login") as! String == login) && (UserDefaults.standard.value(forKey: "password") as! String == password)) {
 
                         isInputValid = true
                         showAlert = false

@@ -13,6 +13,12 @@ struct Settings: View {
     @State private var email = ""
     @State private var login = ""
     @State private var password = ""
+    @State private var showAlert = false
+    @State private var isInputEmpty = true
+    @State private var passwordIsEmpty = true
+    @State private var emailIsEmpty = true
+    @State private var loginIsEmpty = true
+
     var body: some View {
         NavigationView {
             ScrollView() {
@@ -21,19 +27,19 @@ struct Settings: View {
                         .resizable()
                         .frame(width: 120,height: 120)
                         .clipShape(Circle())
-                    Text("Alina Ladik")
+                Text(UserDefaults.standard.string(forKey: "login") ?? "Login is not found")
                         .font(.title)
                         .bold()
                     HStack {
                         Image(systemName: "envelope")
-                        Text("myemeil@mail.com")
+                        Text(UserDefaults.standard.string(forKey: "email") ?? "Email is not found")
                     }
                 Spacer()
                 HStack {
                     Toggle(isOn: $isDarkTheme) {
                         Text("Dark theme")
                     }
-                }.frame(width:350)
+                }
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Login")
                         .font(.headline)
@@ -42,8 +48,8 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
-                    
-                }.frame(width:350)
+
+                }
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Email")
                         .font(.headline)
@@ -52,8 +58,8 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
-                    
-                }.frame(width:350)
+
+                }
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Password")
                         .font(.headline)
@@ -62,11 +68,42 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
-                    
+
                 }
-                .frame(width:350)
                 Spacer()
                     Button {
+                        if (!login.isEmpty) {
+                            UserDefaults.standard.setValue(login, forKey: "login")
+                            isInputEmpty = false
+                            loginIsEmpty = false
+                        }
+                        else {
+                            loginIsEmpty = true
+                        }
+                        
+                        if (!email.isEmpty) {
+                            UserDefaults.standard.setValue(email, forKey: "email")
+                            isInputEmpty = false
+                            emailIsEmpty = false
+                        }
+                        else {
+                            emailIsEmpty = true
+                        }
+                        
+                        if (!password.isEmpty) {
+                            UserDefaults.standard.setValue(password, forKey: "password")
+                            isInputEmpty = false
+                            passwordIsEmpty = false
+                        }
+                        else {
+                            passwordIsEmpty = true
+                        }
+                        
+                        
+                        showAlert = true
+                        email = ""
+                        login = ""
+                        password = ""
                         
                     } label: {
                         Text("Update Profile")
@@ -76,9 +113,16 @@ struct Settings: View {
                             .foregroundColor(.white)
                             .cornerRadius(12)
                     }
-                    
+                    .alert(isPresented: $showAlert) {
+                                if (!isInputEmpty) {
+                                    return Alert(title: Text("Success"), message: Text("Changed \(loginIsEmpty ? "" : "login ")\(emailIsEmpty ? "" : "email ")\(passwordIsEmpty ? "" : "password")"), dismissButton: .default(Text("OK")))
+                                } else {
+                                    return Alert(title: Text("Failure"), message: Text("Your input was empty"), dismissButton: .default(Text("OK")))
+                                }
+                            }
                 }
             }
+            .padding()
         }
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
