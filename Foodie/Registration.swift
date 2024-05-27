@@ -11,10 +11,10 @@ struct SecureTextField: View {
         if #available(iOS 15.0, *) {
             HStack {
                 if isSecureField {
-                    SecureField("Password", text: $text)
+                    SecureField("lPassword", text: $text)
                     
                 } else {
-                    TextField("Password", text: $text)
+                    TextField("tPassword", text: $text)
                     
                 }
             }.overlay(alignment: .trailing) {
@@ -55,7 +55,7 @@ struct Registration: View {
                 Text("Enter login")
                     .font(.headline)
                     .foregroundColor(Color.blue)
-                TextField("Login", text: $login)
+                TextField("tLogin", text: $login)
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
@@ -65,7 +65,7 @@ struct Registration: View {
                 Text("Enter email")
                     .font(.headline)
                     .foregroundColor(Color.blue)
-                TextField("Email", text: $email)
+                TextField("lEmail", text: $email)
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
@@ -82,7 +82,7 @@ struct Registration: View {
                 
             }
             VStack(alignment: .leading, spacing: 5) {
-                Text("Confirm password")
+                Text("lConfirm")
                     .font(.headline)
                     .foregroundColor(Color.blue)
                 SecureTextField(text: $confirmPassword)
@@ -115,7 +115,7 @@ struct Registration: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
                             .foregroundColor(.green)
-                        Text("Confirm")
+                        Text("bConfirm")
                             .foregroundColor(.white)
                             .bold()                    }
                 }
@@ -134,7 +134,7 @@ struct Registration: View {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Image(systemName: "chevron.left")
-                        Text("Back")
+                        Text("bBack")
                     }
                 }
                 

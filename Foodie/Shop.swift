@@ -49,7 +49,7 @@ struct Shop: View {
                     cartItems = []
                 }) {
                     Image(systemName: "chevron.left")
-                    Text("Back")
+                    Text("bBack")
                 }
             }
             
@@ -82,7 +82,7 @@ struct SearchView : View {
         HStack {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
-            TextField("Search", text :$searchText)
+            TextField("tSearch", text :$searchText)
                 .foregroundColor(.black)
                 .frame(height:50)
             Button(action: {

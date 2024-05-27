@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  Foodie
+
+  Created by Алина on 27.05.24.
+  
+*/
+"bConfirm" = "";
+
+"bLogin" = "Login";
+
+"bRegister" = "Register";
+
+"lStart1" = "We deliver grocery at your doorstep";
+
+"lStart2" = "Grocerr gives you fresh vegatables and fruits. Order fresh at grocerr";
+
+"bBack" = "Back";
+
+"lLogin" = "Login";
+
+"tLogin" = "Login";
+
+"lPassword" = "Password";
+
+"tPassword" = "Password";
+
+"lEmail" = "Email";
+
+"lConfirm" = "Confirm password";
+
+"tSearch" = "Search";
+
+"lMenu" = "Menu";
+
+"lCart" = "Cart";
+
+"lSettings" = "Settings";
+
+"lMyCart" = "My Cart";
+
+"LTotalPrice" = "Total Price";
+
+"bPayNow" = "Pay Now >";
+
+"lCreditCard" = "Credit Card";
+
+"lCash" = "Cash";
+
+"lConfirmPay" = "Confirm Pay";
+
+"lComment" = "Comment...";
+
+"lCardName" = "Cardholder's Name";
+
+"lCardNum" = "Card Nubmer";
+
+"lCardDate" = "Expiry Date";
+
+"lCCV" = "CCV";
+
+"LTheme" = "Dark Theme";
+
+"bUpdateProfile" = "Update Profile";
+
+

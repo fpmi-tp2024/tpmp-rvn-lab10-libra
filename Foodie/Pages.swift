@@ -15,17 +15,17 @@ struct Pages: View {
             Shop()
                 .tabItem() {
                     Image(systemName: "cart")
-                    Text("Menu")
+                    Text("lMenu")
                 }
             Cart()
                 .tabItem() {
                     Image(systemName: "bag")
-                    Text("Cart")
+                    Text("lCart")
                 }
             Settings()
                 .tabItem() {
                     Image(systemName: "person")
-                    Text("Settings")
+                    Text("lSettings")
                 }
         }
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C77412F42C04FE1000371B00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C77412F62C04FE1000371B00 /* Localizable.strings */; };
 		C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C41E12C00EA1A00F51BF5 /* Pages.swift */; };
 		C77C716B2C02750700B2AB8C /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C716A2C02750600B2AB8C /* CreditCard.swift */; };
 		C77EA2D92C0108B400BCB908 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77EA2D82C0108B400BCB908 /* Settings.swift */; };
@@ -25,7 +26,6 @@
 		C78DE2D72C009B5C0067C844 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2D62C009B5C0067C844 /* Cart.swift */; };
 		C78DE2D92C00A5100067C844 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2D82C00A50F0067C844 /* ShopItem.swift */; };
 		C78DE2DB2C00A7A30067C844 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2DA2C00A7A30067C844 /* Data.swift */; };
-		D92ECDDD2C04EF010098B9FD /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92ECDDC2C04EF000098B9FD /* MapManager.swift */; };
 		D93770C62C0384930017A894 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93770C52C0384930017A894 /* DBManager.swift */; };
 		D93770CA2C0398840017A894 /* FoodieDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D93770C92C0398830017A894 /* FoodieDB.db */; };
 /* End PBXBuildFile section */
@@ -48,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C77412F52C04FE1000371B00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C77412F72C04FE1600371B00 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C77412F82C04FE3700371B00 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C77C41E12C00EA1A00F51BF5 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 		C77C716A2C02750600B2AB8C /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		C77EA2D82C0108B400BCB908 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -70,7 +73,6 @@
 		C78DE2D62C009B5C0067C844 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		C78DE2D82C00A50F0067C844 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 		C78DE2DA2C00A7A30067C844 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		D92ECDDC2C04EF000098B9FD /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		D93770C52C0384930017A894 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D93770C92C0398830017A894 /* FoodieDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodieDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +143,7 @@
 				C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */,
 				C782B3202C01E06B00895999 /* Payment.swift */,
 				D93770C52C0384930017A894 /* DBManager.swift */,
-				D92ECDDC2C04EF000098B9FD /* MapManager.swift */,
+				C77412F62C04FE1000371B00 /* Localizable.strings */,
 			);
 			path = Foodie;
 			sourceTree = "<group>";
@@ -257,6 +259,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				fr,
 			);
 			mainGroup = C78DE2952C008FA10067C844;
 			productRefGroup = C78DE29F2C008FA20067C844 /* Products */;
@@ -276,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78DE2A92C008FF40067C844 /* Preview Assets.xcassets in Resources */,
+				C77412F42C04FE1000371B00 /* Localizable.strings in Resources */,
 				C78DE2A62C008FF40067C844 /* Assets.xcassets in Resources */,
 				D93770CA2C0398840017A894 /* FoodieDB.db in Resources */,
 			);
@@ -303,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */,
-				D92ECDDD2C04EF010098B9FD /* MapManager.swift in Sources */,
 				C782B31F2C01DB8C00895999 /* LaunchScreenView.swift in Sources */,
 				C782B3212C01E06C00895999 /* Payment.swift in Sources */,
 				C78DE2D52C009B410067C844 /* Login.swift in Sources */,
@@ -351,6 +355,19 @@
 			targetProxy = C78DE2BE2C008FF60067C844 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C77412F62C04FE1000371B00 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C77412F52C04FE1000371B00 /* en */,
+				C77412F72C04FE1600371B00 /* ru */,
+				C77412F82C04FE3700371B00 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C78DE2C52C008FF60067C844 /* Debug */ = {
@@ -479,7 +496,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Foodie/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required for couriers, please allow us to use it.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -510,7 +526,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Foodie/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required for couriers, please allow us to use it.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
