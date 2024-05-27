@@ -27,7 +27,7 @@ struct Login: View {
                 Text("Enter login")
                     .font(.headline)
                     .foregroundColor(Color.blue)
-                TextField("Login", text: $login)
+                TextField("tLogin", text: $login)
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
@@ -67,7 +67,7 @@ struct Login: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
                             .foregroundColor(.green)
-                        Text("Confirm")
+                        Text("lConfirm")
                             .foregroundColor(.white)
                             .bold()
                     }
@@ -85,7 +85,7 @@ struct Login: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "chevron.left")
-                    Text("Back")
+                    Text("bBack")
                 }
             }
             

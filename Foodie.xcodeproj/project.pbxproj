@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C77412F42C04FE1000371B00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C77412F62C04FE1000371B00 /* Localizable.strings */; };
 		C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C41E12C00EA1A00F51BF5 /* Pages.swift */; };
 		C77C716B2C02750700B2AB8C /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C716A2C02750600B2AB8C /* CreditCard.swift */; };
 		C77EA2D92C0108B400BCB908 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77EA2D82C0108B400BCB908 /* Settings.swift */; };
@@ -47,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C77412F52C04FE1000371B00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C77412F72C04FE1600371B00 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C77412F82C04FE3700371B00 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C77C41E12C00EA1A00F51BF5 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 		C77C716A2C02750600B2AB8C /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		C77EA2D82C0108B400BCB908 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */,
 				C782B3202C01E06B00895999 /* Payment.swift */,
 				D93770C52C0384930017A894 /* DBManager.swift */,
+				C77412F62C04FE1000371B00 /* Localizable.strings */,
 			);
 			path = Foodie;
 			sourceTree = "<group>";
@@ -254,6 +259,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				fr,
 			);
 			mainGroup = C78DE2952C008FA10067C844;
 			productRefGroup = C78DE29F2C008FA20067C844 /* Products */;
@@ -273,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78DE2A92C008FF40067C844 /* Preview Assets.xcassets in Resources */,
+				C77412F42C04FE1000371B00 /* Localizable.strings in Resources */,
 				C78DE2A62C008FF40067C844 /* Assets.xcassets in Resources */,
 				D93770CA2C0398840017A894 /* FoodieDB.db in Resources */,
 			);
@@ -347,6 +355,19 @@
 			targetProxy = C78DE2BE2C008FF60067C844 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C77412F62C04FE1000371B00 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C77412F52C04FE1000371B00 /* en */,
+				C77412F72C04FE1600371B00 /* ru */,
+				C77412F82C04FE3700371B00 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C78DE2C52C008FF60067C844 /* Debug */ = {

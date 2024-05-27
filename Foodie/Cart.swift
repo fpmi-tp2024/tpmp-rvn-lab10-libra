@@ -21,7 +21,7 @@ struct Cart: View {
     @State private var showPaymentScreen = false
     var body: some View {
         VStack {
-            Text("My Cart")
+            Text("lMyCart")
                 .font(.system(size: 44, weight: .semibold, design: .rounded))
                 .frame(width: 320, alignment: .leading)
             List {
@@ -48,7 +48,7 @@ struct Cart: View {
                     .opacity(0.8)
                     .frame(width: 350, height: 120)
                 VStack {
-                    Text("Total Price")
+                    Text("LTotalPrice")
                         .foregroundColor(.white)
                         .font(.system(size: 20))
                         .frame(width: 350, alignment: .leading)
@@ -67,7 +67,7 @@ struct Cart: View {
                             .strokeBorder()
                             .frame(width: 120, height: 50)
                             .foregroundColor(.white)
-                        Text("Pay Now >")
+                        Text("bPayNow")
                             .foregroundColor(.white)
                             .bold()
                     }

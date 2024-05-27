@@ -37,31 +37,31 @@ struct Settings: View {
                 Spacer()
                 HStack {
                     Toggle(isOn: $isDarkTheme) {
-                        Text("Dark theme")
+                        Text("LTheme")
                     }
                 }.frame(width: 350)
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Login")
+                    Text("lLogin")
                         .font(.headline)
                         .foregroundColor(Color.blue)
-                    TextField("Login", text: $login)
+                    TextField("tLogin", text: $login)
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
 
                 }.frame(width: 350)
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Email")
+                    Text("lEmail")
                         .font(.headline)
                         .foregroundColor(Color.blue)
-                    TextField("Email", text: $email)
+                    TextField("lEmail", text: $email)
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
 
                 }.frame(width: 350)
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Password")
+                    Text("tPassword")
                         .font(.headline)
                         .foregroundColor(Color.blue)
                     SecureTextField(text: $password)
@@ -106,7 +106,7 @@ struct Settings: View {
                         password = ""
                         
                     } label: {
-                        Text("Update Profile")
+                        Text("bUpdateProfile")
                             .bold()
                             .frame(width:260, height:50)
                             .background(Color.green)

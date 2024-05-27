@@ -16,10 +16,10 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
-                Text("We deliver\n grocery at your\n doorstep")
+                Text("lStart1")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.center)
-                Text("Grocerr gives you fresh vegetables and fruits,\nOrder fresh at grocerr")
+                Text("lStart2")
                     .multilineTextAlignment(.center)
                     .foregroundColor(.gray)
                 Button(action: {
@@ -29,7 +29,7 @@ struct ContentView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
                             .foregroundColor(.green)
-                        Text("Login")
+                        Text("bLogin")
                             .foregroundColor(.white)
                             .bold()
                     }
@@ -47,7 +47,7 @@ struct ContentView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
                             .foregroundColor(.green)
-                        Text("Register")
+                        Text("bRegister")
                             .foregroundColor(.white)
                             .bold()
                     }

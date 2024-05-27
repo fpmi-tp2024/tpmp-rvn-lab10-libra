@@ -29,8 +29,8 @@ struct Payment: View {
             ScrollView() {
                 VStack {
                     Picker(selection: $selectedIndex, label :Text("")) {
-                        Text("Credit Card").tag(0)
-                        Text("Cash").tag(1)
+                        Text("lCreditCard").tag(0)
+                        Text("lCash").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
@@ -57,7 +57,7 @@ struct Payment: View {
                 Spacer()
                     .frame(height: 20)
                 if #available(iOS 15.0, *) {
-                    TextField("Comment", text: $comment)
+                    TextField("lComment", text: $comment)
                         .padding()
                         .background(Color.mint)
                         .cornerRadius(10)
@@ -71,7 +71,7 @@ struct Payment: View {
                         .opacity(0.8)
                         .frame(width: 350, height: 120)
                     VStack {
-                        Text("Total Price")
+                        Text("LTotalPrice")
                             .foregroundColor(.white)
                             .font(.system(size: 20))
                             .frame(width: 350, alignment: .leading)
@@ -90,7 +90,7 @@ struct Payment: View {
                                 .strokeBorder()
                                 .frame(width: 120, height: 50)
                                 .foregroundColor(.white)
-                            Text("Confirm Pay")
+                            Text("lConfirmPay")
                                 .foregroundColor(.white)
                                 .bold()
                         }
@@ -104,7 +104,7 @@ struct Payment: View {
                             self.presentationMode.wrappedValue.dismiss()
                         }) {
                             Image(systemName: "chevron.left")
-                            Text("Back")
+                            Text("bBack")
                         }
                     }
                     
