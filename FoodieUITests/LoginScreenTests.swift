@@ -17,6 +17,9 @@ class LoginScreenTests: XCTestCase {
             // UI tests must launch the application that they test.
             let app = XCUIApplication()
             app.launch()
+        
+            // Wait for the app to become idle
+            XCTAssertTrue(app.waitForExistence(timeout: 60))
 
             app.buttons["Login"].tap()
 
@@ -41,6 +44,9 @@ class LoginScreenTests: XCTestCase {
             // UI tests must launch the application that they test.
             let app = XCUIApplication()
             app.launch()
+            
+            // Wait for the app to become idle
+            XCTAssertTrue(app.waitForExistence(timeout: 60))
 
             app.buttons["Login"].tap()
 
