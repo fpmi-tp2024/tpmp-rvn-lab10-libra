@@ -30,7 +30,7 @@ struct CardFrontView: View {
                 
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("CARD HOLDER")
+                        Text("lCardNameB")
                             .opacity(0.5)
                             .font(.system(size: 14))
                         Text(creditCardInfo.cardHolderName.isEmpty ? " ": creditCardInfo.cardHolderName)
@@ -39,7 +39,7 @@ struct CardFrontView: View {
                     Spacer()
                     
                     VStack(alignment: .leading) {
-                        Text("EXPIRES")
+                        Text("lCardDateB")
                             .opacity(0.5)
                             .font(.system(size: 14))
                         Text(creditCardInfo.expirationDate.isEmpty ? " ": creditCardInfo.expirationDate)
@@ -78,11 +78,11 @@ struct CheckoutFormView: View {
     
     var body: some View {
         Form {
-            TextField("Cardholder's Name", text: $creditCardInfo.cardHolderName)
-            TextField("Card Number", text: $creditCardInfo.cardNumber)
-            TextField("Expiry Date", text: $creditCardInfo.expirationDate)
+            TextField("lCardName", text: $creditCardInfo.cardHolderName)
+            TextField("lCardNum", text: $creditCardInfo.cardNumber)
+            TextField("lCardDate", text: $creditCardInfo.expirationDate)
             if #available(iOS 15.0, *) {
-                TextField("CCV", text: $creditCardInfo.ccvCode)
+                TextField("lCCV", text: $creditCardInfo.ccvCode)
                     .focused($isCCVFocused)
                     .onTapGesture {
                         isCCVFocused = true

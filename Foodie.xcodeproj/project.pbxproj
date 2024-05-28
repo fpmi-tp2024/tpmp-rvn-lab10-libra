@@ -11,6 +11,7 @@
 		C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C41E12C00EA1A00F51BF5 /* Pages.swift */; };
 		C77C716B2C02750700B2AB8C /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C716A2C02750600B2AB8C /* CreditCard.swift */; };
 		C77EA2D92C0108B400BCB908 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77EA2D82C0108B400BCB908 /* Settings.swift */; };
+		C781B1042C05A42600E42A57 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781B1032C05A42500E42A57 /* MapManager.swift */; };
 		C782B31F2C01DB8C00895999 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */; };
 		C782B3212C01E06C00895999 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782B3202C01E06B00895999 /* Payment.swift */; };
 		C78DE2A22C008FA20067C844 /* FoodieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2A12C008FA20067C844 /* FoodieApp.swift */; };
@@ -54,6 +55,7 @@
 		C77C41E12C00EA1A00F51BF5 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 		C77C716A2C02750600B2AB8C /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		C77EA2D82C0108B400BCB908 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C781B1032C05A42500E42A57 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		C782B31D2C01DA0C00895999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		C782B3202C01E06B00895999 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		C78DE2A02C008FA20067C844 /* Foodie */ = {
 			isa = PBXGroup;
 			children = (
+				C781B1032C05A42500E42A57 /* MapManager.swift */,
 				D93770C92C0398830017A894 /* FoodieDB.db */,
 				C77C716A2C02750600B2AB8C /* CreditCard.swift */,
 				C782B31D2C01DA0C00895999 /* Info.plist */,
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */,
+				C781B1042C05A42600E42A57 /* MapManager.swift in Sources */,
 				C782B31F2C01DB8C00895999 /* LaunchScreenView.swift in Sources */,
 				C782B3212C01E06C00895999 /* Payment.swift in Sources */,
 				C78DE2D52C009B410067C844 /* Login.swift in Sources */,

@@ -40,15 +40,15 @@
 
 "lMyCart" = "Моя Корзина";
 
-"LTotalPrice" = "Общая стоимость";
+"LTotalPrice" = "Итого";
 
-"bPayNow" = "Оплатить Сейчас >";
+"bPayNow" = "Оплатить >";
 
 "lCreditCard" = "Карта";
 
 "lCash" = "Наличные";
 
-"lConfirmPay" = "Подтвердить оплату";
+"lConfirmPay" = "Подтвердить";
 
 "lComment" = "Комментарий...";
 
@@ -57,6 +57,10 @@
 "lCardNum" = "Номер Карты";
 
 "lCardDate" = "Срок действия";
+
+"lCardNameB" = "ВЛАДЕЛЕЦ КАРТЫ";
+
+"lCardDateB" = "ДЕЙСТВИЕ";
 
 "lCCV" = "CCV";
 
