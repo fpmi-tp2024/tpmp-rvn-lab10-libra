@@ -8,6 +8,12 @@
 import SwiftUI
 import MapKit
 
+struct Location: Identifiable {
+    let id = UUID()
+    let name: String
+    let coordinate: CLLocationCoordinate2D
+}
+
 struct Payment: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @Environment(\.presentationMode) var presentationMode
@@ -17,13 +23,37 @@ struct Payment: View {
     @State private var comment = ""
     @State private var flip: Bool = false
     @State private var degrees: Double = 0
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.331, longitude: -121.89), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+    @StateObject private var mapModel = MapModel()
+    
+    private let locations = [Location(name: "Restaurant #1", coordinate: CLLocationCoordinate2D(latitude: 53.90222, longitude: 27.54829)), Location(name: "Restaurant #2", coordinate: CLLocationCoordinate2D(latitude: 53.89206, longitude: 27.55114)), Location(name: "Restaurant #3", coordinate: CLLocationCoordinate2D(latitude: 53.93004, longitude: 27.57754))]
+    
     func calculateTotalPrice() {
         totalPrice = 0.00
         for i in 0..<cartItems.count {
             totalPrice += cartItems[i][2] as! Double
         }
     }
+    
+    func getClosestLocations(userLocation: CLLocationCoordinate2D) -> [Location] {
+        var distances: [CLLocationDistance] = []
+        let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+        
+        for location in locations {
+            let location2 = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            distances.append(user.distance(from: location2))
+        }
+
+        var closestLocations: [Location] = []
+        
+        for location in locations {
+            if (user.distance(from: CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)) == distances.min()) {
+                closestLocations.append(location)
+            }
+        }
+        
+        return closestLocations
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView() {
@@ -49,10 +79,13 @@ struct Payment: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
                 Spacer()
                     .frame(height: 20)
-                Map(coordinateRegion: $region, showsUserLocation: true)
+                Map(coordinateRegion: $mapModel.region, showsUserLocation: true,  annotationItems: mapModel.userLocation.map({ getClosestLocations(userLocation: $0) }) ?? []) { location in
+                    MapMarker(coordinate: location.coordinate)
+                }
                     .onAppear{
-                       // ContentViewModel.checkIfLocationServicesIsEnabled()
+                        mapModel.checkIfLocationServicesEnabled()
                     }
+                    .accentColor(.red)
                     .frame(width:300, height:300)
                 Spacer()
                     .frame(height: 20)
@@ -83,7 +116,8 @@ struct Payment: View {
                             .padding(.leading, 60)
                     }
                     Button() {
-                        
+                        cartItems = []
+                        self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
@@ -97,7 +131,8 @@ struct Payment: View {
                     }.offset(x: 80)
                 }
                 
-            }.onAppear(perform: self.calculateTotalPrice)
+            }
+                .onAppear(perform: self.calculateTotalPrice)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
@@ -127,5 +162,3 @@ struct Payment_Previews: PreviewProvider {
         Payment()
     }
 }
-
-

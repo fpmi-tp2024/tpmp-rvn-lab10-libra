@@ -46,6 +46,7 @@ struct Shop: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
+                    cartItems = []
                 }) {
                     Image(systemName: "chevron.left")
                     Text("bBack")

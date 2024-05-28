@@ -148,6 +148,13 @@ struct CreditCard: View {
     @State private var flip: Bool = false
     @State private var degrees: Double = 0
     
+    func clearCard() {
+        creditCardInfo.cardNumber = ""
+        creditCardInfo.cardHolderName = ""
+        creditCardInfo.ccvCode = ""
+        creditCardInfo.expirationDate = ""
+    }
+    
     var body: some View {
         VStack {
             
