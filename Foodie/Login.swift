@@ -24,7 +24,7 @@ struct Login: View {
             Spacer()
 
             VStack(alignment: .leading, spacing: 5) {
-                Text("Enter login")
+                Text("tELogin")
                     .font(.headline)
                     .foregroundColor(Color.blue)
                 TextField("tLogin", text: $login)
@@ -34,7 +34,7 @@ struct Login: View {
             }
 
             VStack(alignment: .leading, spacing: 5) {
-                Text("Enter password")
+                Text("tEPassword")
                     .font(.headline)
                     .foregroundColor(Color.blue)
                 SecureTextField(text: $password)
@@ -77,7 +77,7 @@ struct Login: View {
         }
         .padding()
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Error"), message: Text("There is a mistake in your input. \nCheck if all fields are filled and if your input is correct"), dismissButton: .default(Text("OK")))
+            Alert(title: Text("tErr"), message: Text("alert3"), dismissButton: .default(Text("tok")))
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {

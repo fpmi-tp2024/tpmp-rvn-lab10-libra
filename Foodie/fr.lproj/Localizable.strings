@@ -27,7 +27,7 @@
 
 "lEmail" = "Courriel";
 
-"lConfirm" = "Confirmer Le Mot de Passe";
+"lConfirm" = "Confirmer";
 
 "tSearch" = "Chercher";
 
@@ -66,5 +66,29 @@
 "lCardNameB" = "Porte-Cartes";
 
 "lCardDateB" = "Expire";
+
+"tEPassword" = "Entrez Le Mot De Passe";
+
+"tEEmail" = "Entrez votre E-Mail";
+
+"tELogin" = "Entrer le Login";
+
+"tErr" = "Erreur";
+
+"tFail" = "Echec";
+
+"tSuccess" = "Succés";
+
+"alertEmpty" = "Votre saisie était vide";
+
+"alert1" = "II y a une erreur dans votre saisie. \nVérifiez si tous les champs sont remplis et si les mots de passe sont identiques";
+
+"tok" = "D'ACCORD";
+
+"tConfExit" = "Confirmez votre sortie";
+
+"alert2" = "Voulez-vouz vraiment arréter?\nVotre panierr sera effacé.";
+
+"alert3" = "II y a une erreur dans votre saisie. \nVérifiez si tous les champs sont remplis et si votre saisie est correcte";
 
 

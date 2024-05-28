@@ -115,9 +115,9 @@ struct Settings: View {
                     }
                     .alert(isPresented: $showAlert) {
                                 if (!isInputEmpty) {
-                                    return Alert(title: Text("Success"), message: Text("Changed \(loginIsEmpty ? "" : "login ")\(emailIsEmpty ? "" : "email ")\(passwordIsEmpty ? "" : "password")"), dismissButton: .default(Text("OK")))
+                                    return Alert(title: Text("tSuccess"), message: Text("Changed \(loginIsEmpty ? "" : "login ")\(emailIsEmpty ? "" : "email ")\(passwordIsEmpty ? "" : "password")"), dismissButton: .default(Text("tok")))
                                 } else {
-                                    return Alert(title: Text("Failure"), message: Text("Your input was empty"), dismissButton: .default(Text("OK")))
+                                    return Alert(title: Text("tFail"), message: Text("alertEmpty"), dismissButton: .default(Text("tok")))
                                 }
                             }
                 }

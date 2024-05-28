@@ -62,7 +62,7 @@ struct Shop: View {
         .navigationViewStyle(.stack)
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
         .alert(isPresented: $confirmExit) {
-            Alert(title: Text("Confirm your exit"), message: Text("Are you sure you want to quit?\nYour cart will be cleared."), primaryButton: .default(Text("OK")) {
+            Alert(title: Text("tConfExit"), message: Text("alert2"), primaryButton: .default(Text("tok")) {
                 cartItems = []
                 self.presentationMode.wrappedValue.dismiss()
             }, secondaryButton: .cancel() {

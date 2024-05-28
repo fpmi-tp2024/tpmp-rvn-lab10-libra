@@ -52,7 +52,7 @@ struct Registration: View {
         VStack(spacing: 20) {
             Spacer()
             VStack(alignment: .leading, spacing: 5) {
-                Text("Enter login")
+                Text("tELogin")
                     .font(.headline)
                     .foregroundColor(Color.blue)
                 TextField("tLogin", text: $login)
@@ -62,7 +62,7 @@ struct Registration: View {
                 
             }
             VStack(alignment: .leading, spacing: 5) {
-                Text("Enter email")
+                Text("tEEmail")
                     .font(.headline)
                     .foregroundColor(Color.blue)
                 TextField("lEmail", text: $email)
@@ -72,7 +72,7 @@ struct Registration: View {
                 
             }
             VStack(alignment: .leading, spacing: 5) {
-                Text("Enter password")
+                Text("tEPassword")
                     .font(.headline)
                     .foregroundColor(Color.blue)
                 SecureTextField(text: $password)
@@ -125,7 +125,7 @@ struct Registration: View {
         }        .padding()
         
             .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text("There is a mistake in your input. \nCheck if all fields are filled and if passwords are the same"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("tErr"), message: Text("alert1"), dismissButton: .default(Text("tok")))
                     
             }
             .toolbar {
