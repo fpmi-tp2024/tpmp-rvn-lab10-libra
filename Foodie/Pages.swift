@@ -9,15 +9,16 @@ import SwiftUI
 
 struct Pages: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
+    @State private var cartItems: [[Any]] = []
     
     var body: some View {
         TabView {
-            Shop()
+            Shop(cartItems: $cartItems)
                 .tabItem() {
                     Image(systemName: "cart")
                     Text("lMenu")
                 }
-            Cart()
+            Cart(cartItems: $cartItems)
                 .tabItem() {
                     Image(systemName: "bag")
                     Text("lCart")

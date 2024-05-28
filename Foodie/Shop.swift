@@ -13,8 +13,10 @@ struct Shop: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @Environment(\.presentationMode) var presentationMode
     @State var goToCart = false
+    @State private var confirmExit = false
     @State private var searchText: String = ""
     @State private var filteredItems = shopItems
+    @Binding var cartItems: [[Any]]
     
     var columns = [
         GridItem(.flexible()),
@@ -34,7 +36,7 @@ struct Shop: View {
             ScrollView() {
                 LazyVGrid(columns: columns, spacing: 30) {
                     ForEach(0..<filteredItems.count, id:\.self) { item in
-                        ShopItem(imageName: filteredItems[item][0] as! String, title: filteredItems[item][1] as! String, price: filteredItems[item][2] as! Double, color: filteredItems[item][3] as! Color, selfIndex: item)
+                        ShopItem(cartItems: $cartItems, imageName: filteredItems[item][0] as! String, title: filteredItems[item][1] as! String, price: filteredItems[item][2] as! Double, color: filteredItems[item][3] as! Color, selfIndex: item)
                     }
                 }
             }.padding(.bottom, 15)
@@ -45,8 +47,7 @@ struct Shop: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                    cartItems = []
+                    confirmExit = true
                 }) {
                     Image(systemName: "chevron.left")
                     Text("bBack")
@@ -60,7 +61,13 @@ struct Shop: View {
     }
         .navigationViewStyle(.stack)
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
-        
+        .alert(isPresented: $confirmExit) {
+            Alert(title: Text("Confirm your exit"), message: Text("Are you sure you want to quit?\nYour cart will be cleared."), primaryButton: .default(Text("OK")) {
+                cartItems = []
+                self.presentationMode.wrappedValue.dismiss()
+            }, secondaryButton: .cancel() {
+            })
+        }
     }
     func filterItems(searchText: String){
         if searchText.isEmpty {
@@ -102,7 +109,7 @@ struct SearchView : View {
 
 struct Shop_Previews: PreviewProvider {
     static var previews: some View {
-        Shop()
+        Shop(cartItems: .constant([]))
     }
 }
 

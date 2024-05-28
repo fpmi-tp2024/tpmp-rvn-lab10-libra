@@ -9,6 +9,6 @@ import SwiftUI
 
 var shopItems = DBManager.getItems()
 
-var cartItems: [[Any]] = [
-
-]
+//var cartItems: [[Any]] = [
+//
+//]

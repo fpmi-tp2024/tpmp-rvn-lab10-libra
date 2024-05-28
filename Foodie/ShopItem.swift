@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShopItem: View {
     
+    @Binding var cartItems: [[Any]]
     var imageName: String
     var title: String
     var price: Double
@@ -42,6 +43,6 @@ struct ShopItem: View {
 
 struct ShopItem_Previews: PreviewProvider {
     static var previews: some View {
-        ShopItem(imageName: "avocado", title: "Avocado", price: 4.00, color: Color.green, selfIndex: 0)
+        ShopItem(cartItems: .constant([]), imageName: "avocado", title: "Avocado", price: 4.00, color: Color.green, selfIndex: 0)
     }
 }

@@ -18,21 +18,16 @@ struct Payment: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @Environment(\.presentationMode) var presentationMode
     @State private var deliveryDate = Date()
-    @State private var totalPrice = 0.00
     @State private var selectedIndex = 0
     @State private var comment = ""
     @State private var flip: Bool = false
     @State private var degrees: Double = 0
     @StateObject private var mapModel = MapModel()
+    @Binding var cartItems: [[Any]]
+    @Binding var totalPrice: Double
     
     private let locations = [Location(name: "Restaurant #1", coordinate: CLLocationCoordinate2D(latitude: 53.90222, longitude: 27.54829)), Location(name: "Restaurant #2", coordinate: CLLocationCoordinate2D(latitude: 53.89206, longitude: 27.55114)), Location(name: "Restaurant #3", coordinate: CLLocationCoordinate2D(latitude: 53.93004, longitude: 27.57754))]
-    
-    func calculateTotalPrice() {
-        totalPrice = 0.00
-        for i in 0..<cartItems.count {
-            totalPrice += cartItems[i][2] as! Double
-        }
-    }
+
     
     func getClosestLocations(userLocation: CLLocationCoordinate2D) -> [Location] {
         var distances: [CLLocationDistance] = []
@@ -117,6 +112,7 @@ struct Payment: View {
                     }
                     Button() {
                         cartItems = []
+                        totalPrice = 0.0
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         ZStack {
@@ -132,7 +128,6 @@ struct Payment: View {
                 }
                 
             }
-                .onAppear(perform: self.calculateTotalPrice)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
@@ -159,6 +154,6 @@ struct Payment: View {
 
 struct Payment_Previews: PreviewProvider {
     static var previews: some View {
-        Payment()
+        Payment(cartItems: .constant([]), totalPrice: .constant(0.0))
     }
 }

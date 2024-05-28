@@ -19,6 +19,8 @@ struct Cart: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @State var totalPrice = 0.00
     @State private var showPaymentScreen = false
+    @Binding var cartItems: [[Any]]
+    
     var body: some View {
         VStack {
             Text("lMyCart")
@@ -74,7 +76,7 @@ struct Cart: View {
                 }.offset(x: 80)
                     .disabled(totalPrice == 0.00)
                     .fullScreenCover(isPresented: $showPaymentScreen) {
-                        Payment()
+                        Payment(cartItems: $cartItems, totalPrice: $totalPrice)
             }
             
         }.onAppear(perform: self.calculateTotalPrice)
@@ -86,6 +88,6 @@ struct Cart: View {
 
 struct Cart_Previews: PreviewProvider {
     static var previews: some View {
-        Cart()
+        Cart(cartItems: .constant([]))
     }
 }
