@@ -41,7 +41,8 @@ struct Payment: View {
                 }
                 Spacer()
                     .frame(height: 20)
-                DatePicker("Delivery time", selection: $deliveryDate)
+                //Text("lDate")
+                DatePicker("lDate", selection: $deliveryDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                 Spacer()
                     .frame(height: 20)
@@ -53,6 +54,20 @@ struct Payment: View {
                 }
                 .accentColor(.red)
                 .frame(width:300, height:300)
+
+                    .onAppear{
+                        mapManager.checkIfLocationServicesEnabled()
+                    }
+                    .accentColor(.red)
+                    .frame(width:300, height:300)
+                if #available(iOS 15.0, *) {
+                    TextField("lAdress", text: $comment)
+                        .padding()
+                        .background(Color.mint)
+                        .cornerRadius(10)
+                } else {
+                    // Fallback on earlier versions
+                }
                 Spacer()
                     .frame(height: 20)
                 if #available(iOS 15.0, *) {

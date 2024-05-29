@@ -91,4 +91,8 @@
 
 "alert3" = "II y a une erreur dans votre saisie. \nVérifiez si tous les champs sont remplis et si votre saisie est correcte";
 
+"lAdress" = "Adresse de livraison";
+
+"lDate" = "Date et heure de Livraison";
+
 
