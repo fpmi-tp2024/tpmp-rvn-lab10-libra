@@ -9,13 +9,11 @@ import SwiftUI
 
 struct Login: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
-    @State private var login = ""
-    @State private var password = ""
     @State private var isPasswordInputSecure = true
-    @State private var isInputValid = false
     @State private var showAlert = false
     @Binding var isLogged: Bool
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var loginViewModel = LoginViewModel()
     
     var body: some View {
         NavigationView {
@@ -27,7 +25,7 @@ struct Login: View {
                 Text("tELogin")
                     .font(.headline)
                     .foregroundColor(Color.blue)
-                TextField("tLogin", text: $login)
+                TextField("tLogin", text: $loginViewModel.login)
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
@@ -37,7 +35,7 @@ struct Login: View {
                 Text("tEPassword")
                     .font(.headline)
                     .foregroundColor(Color.blue)
-                SecureTextField(text: $password)
+                SecureTextField(text: $loginViewModel.password)
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
@@ -46,21 +44,15 @@ struct Login: View {
             VStack() {
                 Spacer()
                 Button(action: {
-                    if (!login.isEmpty && !password.isEmpty &&
-                        (UserDefaults.standard.value(forKey: "login") != nil) && (UserDefaults.standard.value(forKey: "password") != nil) &&
-                        (UserDefaults.standard.value(forKey: "login") as! String == login) && (UserDefaults.standard.value(forKey: "password") as! String == password)) {
-
-                        isInputValid = true
+                    if (loginViewModel.isLoginCorrect()) {
                         showAlert = false
                         
                         self.presentationMode.wrappedValue.dismiss()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             isLogged = true
                         }
-                        
                     }
                     else {
-                        isInputValid = false
                         showAlert = true
                     }
                 }) {
