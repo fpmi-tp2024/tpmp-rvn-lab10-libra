@@ -16,21 +16,29 @@ class DBManager {
         let documentDatabasePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("FoodieDB.db").path
         if (FileManager.default.fileExists(atPath: documentDatabasePath)) {
             print("Database already exists")
-        }
-        else {
-            guard let bundleDatabasePath = Bundle.main.resourceURL?.appendingPathComponent("FoodieDB.db").path else {
-                print("Unwrapping error: Bundle database path doesnt exist")
-                return nil
-            }
             
             do {
-                try FileManager.default.copyItem(atPath: bundleDatabasePath, toPath: documentDatabasePath)
-                print("Database copied")
+                try FileManager.default.removeItem(atPath: documentDatabasePath)
+                print("Database removed")
             }
             catch{
                 print("Error: \(error.localizedDescription)")
                 return nil
             }
+        }
+        
+        guard let bundleDatabasePath = Bundle.main.resourceURL?.appendingPathComponent("FoodieDB.db").path else {
+            print("Unwrapping error: Bundle database path doesnt exist")
+            return nil
+        }
+            
+        do {
+            try FileManager.default.copyItem(atPath: bundleDatabasePath, toPath: documentDatabasePath)
+            print("Database copied")
+        }
+        catch{
+            print("Error: \(error.localizedDescription)")
+            return nil
         }
 
         if (sqlite3_open(documentDatabasePath, &databasePointer) == SQLITE_OK) {
@@ -47,7 +55,7 @@ class DBManager {
     static func getItems() -> [[Any]] {
         var shopItems: [[Any]] = []
         let db = getDBPointer()
-        let queryString = "SELECT Title, Image, Price, Color FROM MenuItems;"
+        let queryString = "SELECT Title, Image, Price FROM MenuItems;"
 
         var queryStatement: OpaquePointer?
 
@@ -57,18 +65,11 @@ class DBManager {
                 let title = String(cString: sqlite3_column_text(queryStatement, 0))
                 let image = String(cString: sqlite3_column_text(queryStatement, 1))
                 let price = sqlite3_column_double(queryStatement, 2)
-                let colorString = String(cString: sqlite3_column_text(queryStatement, 3))
-
-                let components = colorString.split(separator: ",")
-                let red = CGFloat(Double(components[0]) ?? 0.0) / 255.0
-                let green = CGFloat(Double(components[1]) ?? 0.0) / 255.0
-                let blue = CGFloat(Double(components[2]) ?? 0.0) / 255.0
-                let color = Color(UIColor(red: red, green: green, blue: blue, alpha: 1.0))
                 
                 oneItemArr.append(image)
                 oneItemArr.append(title)
                 oneItemArr.append(price)
-                oneItemArr.append(color)
+                oneItemArr.append(Color(UIColor(red: 249.0 / 255, green: 196.0 / 255, blue: 85.0 / 255, alpha: 0.7)))
                 
                 shopItems.append(oneItemArr)
             }
