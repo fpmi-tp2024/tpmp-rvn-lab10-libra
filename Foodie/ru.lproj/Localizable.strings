@@ -97,4 +97,13 @@
 "lDate" = "Дата и время доставки";
 
 
+// Database values:
 
+"Burger" = "Бургер";
+"Coffee" = "Кофе";
+"French Fries" = "Картофель фри";
+"Fried Chicken" = "Жареный цыпленок";
+"Hotdog" = "Хот-дог";
+"Ice-Cream" = "Мороженое";
+"Pizza" = "Пицца";
+"Pork" = "Свинина";

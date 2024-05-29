@@ -95,4 +95,13 @@
 
 "lDate" = "Date et heure de Livraison";
 
+// Database values:
 
+"Burger" = "Burger";
+"Coffee" = "Café";
+"French Fries" = "Frites";
+"Fried Chicken" = "Poulet frit";
+"Hotdog" = "Hot-dog";
+"Ice-Cream" = "Glace";
+"Pizza" = "Pizza";
+"Pork" = "Porc";

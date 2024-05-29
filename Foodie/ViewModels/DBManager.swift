@@ -62,10 +62,10 @@ class DBManager {
         if (sqlite3_prepare_v2(db, queryString, -1, &queryStatement, nil) == SQLITE_OK) {
             while (sqlite3_step(queryStatement) == SQLITE_ROW) {
                 var oneItemArr: [Any] = []
-                let title = String(cString: sqlite3_column_text(queryStatement, 0))
+                let title = NSLocalizedString(String(cString: sqlite3_column_text(queryStatement, 0)), comment: "")
                 let image = String(cString: sqlite3_column_text(queryStatement, 1))
                 let price = sqlite3_column_double(queryStatement, 2)
-                
+        
                 oneItemArr.append(image)
                 oneItemArr.append(title)
                 oneItemArr.append(price)
