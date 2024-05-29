@@ -42,6 +42,7 @@ struct Shop: View {
                     }) {
                         Image(systemName: "chevron.left")
                         Text("bBack")
+                            .accessibility(identifier: "BackButton")
                     }
                 }
             }

@@ -19,43 +19,14 @@ class RegistrarionScreenTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func registerSuccessfully(in app: XCUIApplication) {
-        app.buttons["Register"].tap()
-
-        let emailTextField = app.textFields["EmailField"]
-        let loginTextField = app.textFields["LoginField"]
-        let passwordTextField = app.secureTextFields["PasswordField"]
-        let confirmPasswordTextField = app.secureTextFields["ConfirmPasswordField"]
-
-        emailTextField.tap()
-        emailTextField.typeText("test@example.com")
-
-        loginTextField.tap()
-        loginTextField.typeText("user")
-
-        passwordTextField.tap()
-        passwordTextField.typeText("p")
-
-        confirmPasswordTextField.tap()
-        confirmPasswordTextField.typeText("p")
-
-        app.buttons["ConfirmButton"].tap()
-    }
-
 
     func testSuccessfulRegistration() throws {
         let app = XCUIApplication()
         app.launch()
 
-        registerSuccessfully(in: app)
+        UITestsHelper.registerSuccessfully(in: app)
 
         XCTAssertFalse(app.alerts["Error"].exists)
-
-        // Wait for a specific amount of time
-        let expectation = XCTestExpectation(description: "Wait for 5 seconds")
-        let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
-        XCTAssertEqual(result, .timedOut)
 
         XCTAssertTrue(app.textFields["SearchField"].exists)
     }
@@ -65,7 +36,7 @@ class RegistrarionScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        app.buttons["Register"].tap()
+        app.buttons["RegisterButton"].tap()
 
         let emailTextField = app.textFields["EmailField"]
         let loginTextField = app.textFields["LoginField"]
@@ -86,10 +57,7 @@ class RegistrarionScreenTests: XCTestCase {
 
         app.buttons["ConfirmButton"].tap()
         
-        // Wait for a specific amount of time
-        let expectation = XCTestExpectation(description: "Wait for 5 seconds")
-        let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
-        XCTAssertEqual(result, .timedOut)
+        UITestsHelper.waitForSeconds(5)
 
         //XCTAssertTrue(app.alerts["Error"].exists)
     }
@@ -98,7 +66,7 @@ class RegistrarionScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        app.buttons["Register"].tap()
+        app.buttons["RegisterButton"].tap()
 
         let emailTextField = app.textFields["EmailField"]
         let loginTextField = app.textFields["LoginField"]
@@ -119,10 +87,7 @@ class RegistrarionScreenTests: XCTestCase {
 
         app.buttons["ConfirmButton"].tap()
         
-        // Wait for a specific amount of time
-        let expectation = XCTestExpectation(description: "Wait for 5 seconds")
-        let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
-        XCTAssertEqual(result, .timedOut)
+        UITestsHelper.waitForSeconds(5)
 
         XCTAssertTrue(app.alerts["Error"].exists)
     }

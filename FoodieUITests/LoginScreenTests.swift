@@ -17,24 +17,29 @@ class LoginScreenTests: XCTestCase {
             // UI tests must launch the application that they test.
             let app = XCUIApplication()
             app.launch()
+        
+            UITestsHelper.registerSuccessfully(in: app)
+            app.buttons["BackButton"].tap()
+            app.buttons["OK"].tap()
 
-            app.buttons["Login"].tap()
+            app.buttons["LoginButton"].tap()
 
             // Type the username.
             let usernameTextField = app.textFields["LoginField"]
             usernameTextField.tap()
-            usernameTextField.typeText("1")
+            usernameTextField.typeText("user")
 
             // Type the password.
             let passwordTextField = app.secureTextFields["PasswordField"]
             passwordTextField.tap()
-            passwordTextField.typeText("1")
+            passwordTextField.typeText("p")
 
             // Tap the login button.
             app.buttons["ConfirmButton"].tap()
+        
+            UITestsHelper.waitForSeconds(5)
 
-            // Check that the login screen is no longer visible.
-            XCTAssertFalse(app.navigationBars["Login"].exists)
+            XCTAssertTrue(app.textFields["SearchField"].exists)
         }
 
         func testFailedLogin() {
@@ -42,7 +47,7 @@ class LoginScreenTests: XCTestCase {
             let app = XCUIApplication()
             app.launch()
 
-            app.buttons["Login"].tap()
+            app.buttons["LoginButton"].tap()
 
             // Type the username.
             let usernameTextField = app.textFields["LoginField"]

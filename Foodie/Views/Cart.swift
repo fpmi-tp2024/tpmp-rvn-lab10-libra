@@ -66,6 +66,7 @@ struct Cart: View {
                         Text("bPayNow")
                             .foregroundColor(.white)
                             .bold()
+                            .accessibility(identifier: "PayButton")
                     }
                 }
                 .offset(x: 80)

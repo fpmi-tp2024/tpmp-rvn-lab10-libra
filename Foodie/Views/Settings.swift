@@ -33,6 +33,7 @@ struct Settings: View {
                     Toggle(isOn: $isDarkTheme) {
                         Text("LTheme")
                     }
+                    .accessibility(identifier: "SwitchThemeToggle")
                 }
                 .frame(width: 350)
                 

@@ -35,6 +35,7 @@ struct ContentView: View {
                         Text("bLogin")
                             .foregroundColor(.white)
                             .bold()
+                            .accessibility(identifier: "LoginButton")
                     }
                     
                 }
@@ -52,6 +53,7 @@ struct ContentView: View {
                         Text("bRegister")
                             .foregroundColor(.white)
                             .bold()
+                            .accessibility(identifier: "RegisterButton")
                     }
                     
                 }
