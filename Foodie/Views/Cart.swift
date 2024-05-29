@@ -54,6 +54,7 @@ struct Cart: View {
                         .font(.system(size: 26, weight: .bold))
                         .frame(width: 350, alignment: .leading)
                         .padding(.leading, 60)
+                        .accessibility(identifier: "TotalPriceValue")
                 }
                 Button() {
                     self.showPaymentScreen = true

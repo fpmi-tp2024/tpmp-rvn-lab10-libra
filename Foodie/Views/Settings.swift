@@ -84,6 +84,7 @@ struct Settings: View {
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(12)
+                        .accessibility(identifier: "UpdateButton")
                 }
                 .alert(isPresented: $showAlert) {
                     settingsViewModel.informUser()

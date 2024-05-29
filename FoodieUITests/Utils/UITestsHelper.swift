@@ -42,4 +42,17 @@ class UITestsHelper {
         XCTAssertEqual(result, .timedOut)
     }
     
+    static func clearText(textField: XCUIElement) {
+        guard let stringValue = textField.value as? String else {
+            XCTFail("Tried to clear and enter text into a non string value")
+            return
+        }
+
+        textField.tap()
+
+        let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.count)
+
+        textField.typeText(deleteString)
+    }
+
 }
