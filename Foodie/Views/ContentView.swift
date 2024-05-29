@@ -1,6 +1,10 @@
-////  ContentView.swift
-//  Foodie//
-//  Created by Алина on 24.05.24.//
+//
+//  ContentView.swift
+//  Foodie
+//
+//  Created by Алина on 24.05.24.
+//
+
 import SwiftUI
 import CoreData
 struct ContentView: View {
@@ -24,7 +28,6 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                 Button(action: {
                     self.showLoginScreen = true
-                    
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
@@ -42,7 +45,6 @@ struct ContentView: View {
                 }
                 Button(action: {
                     self.showRegisterScreen = true
-                    
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)

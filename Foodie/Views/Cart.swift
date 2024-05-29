@@ -8,18 +8,11 @@
 
 import SwiftUI
 
-struct Cart: View {
-    func calculateTotalPrice() {
-        totalPrice = 0.00
-        for i in 0..<cartItems.count {
-            totalPrice += cartItems[i][2] as! Double
-        }
-    }
-    
+struct Cart: View {    
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
-    @State var totalPrice = 0.00
     @State private var showPaymentScreen = false
     @Binding var cartItems: [[Any]]
+    @ObservedObject var cartViewModel = CartViewModel()
     
     var body: some View {
         VStack {
@@ -38,9 +31,10 @@ struct Cart: View {
                                 .foregroundColor(.gray)
                         }
                     }
-                }.onDelete{indexSet in
+                }
+                .onDelete{indexSet in
                     cartItems.remove(atOffsets: indexSet)
-                    self.calculateTotalPrice()
+                    cartViewModel.calculateTotalPriceForCart(cartItems: cartItems)
                 }
             }
             Spacer()
@@ -55,7 +49,7 @@ struct Cart: View {
                         .font(.system(size: 20))
                         .frame(width: 350, alignment: .leading)
                         .padding(.leading, 60)
-                    Text("$\(String(format: "%.2f", totalPrice))")
+                    Text("$\(String(format: "%.2f", cartViewModel.totalPrice))")
                         .foregroundColor(.white)
                         .font(.system(size: 26, weight: .bold))
                         .frame(width: 350, alignment: .leading)
@@ -73,17 +67,19 @@ struct Cart: View {
                             .foregroundColor(.white)
                             .bold()
                     }
-                }.offset(x: 80)
-                    .disabled(totalPrice == 0.00)
-                    .fullScreenCover(isPresented: $showPaymentScreen) {
-                        Payment(cartItems: $cartItems, totalPrice: $totalPrice)
+                }
+                .offset(x: 80)
+                .disabled(cartViewModel.totalPrice == 0.00)
+                .fullScreenCover(isPresented: $showPaymentScreen) {
+                    Payment(cartItems: $cartItems, totalPrice: $cartViewModel.totalPrice)
+                }
             }
-            
-        }.onAppear(perform: self.calculateTotalPrice)
-    }
+            .onAppear {
+                cartViewModel.calculateTotalPriceForCart(cartItems: cartItems)
+            }
+        }
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
-    
 }
 
 struct Cart_Previews: PreviewProvider {

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C77412F42C04FE1000371B00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C77412F62C04FE1000371B00 /* Localizable.strings */; };
 		C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C41E12C00EA1A00F51BF5 /* Pages.swift */; };
-		C77C716B2C02750700B2AB8C /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C716A2C02750600B2AB8C /* CreditCard.swift */; };
 		C77EA2D92C0108B400BCB908 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77EA2D82C0108B400BCB908 /* Settings.swift */; };
 		C781B1042C05A42600E42A57 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781B1032C05A42500E42A57 /* MapManager.swift */; };
 		C782B31F2C01DB8C00895999 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */; };
@@ -24,10 +23,20 @@
 		C78DE2D32C009B260067C844 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2D22C009B260067C844 /* Registration.swift */; };
 		C78DE2D52C009B410067C844 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2D42C009B410067C844 /* Login.swift */; };
 		C78DE2D72C009B5C0067C844 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2D62C009B5C0067C844 /* Cart.swift */; };
-		C78DE2D92C00A5100067C844 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2D82C00A50F0067C844 /* ShopItem.swift */; };
 		C78DE2DB2C00A7A30067C844 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2DA2C00A7A30067C844 /* Data.swift */; };
 		D93770C62C0384930017A894 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93770C52C0384930017A894 /* DBManager.swift */; };
 		D93770CA2C0398840017A894 /* FoodieDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D93770C92C0398830017A894 /* FoodieDB.db */; };
+		D9A36AE22C0753C600E6BADF /* SecureTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE12C0753C600E6BADF /* SecureTextFieldView.swift */; };
+		D9A36AE42C075A7F00E6BADF /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE32C075A7F00E6BADF /* RegistrationViewModel.swift */; };
+		D9A36AE62C075B6000E6BADF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE52C075B6000E6BADF /* User.swift */; };
+		D9A36AE82C075FF300E6BADF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE72C075FF300E6BADF /* LoginViewModel.swift */; };
+		D9A36AEA2C0763FF00E6BADF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE92C0763FE00E6BADF /* SearchView.swift */; };
+		D9A36AEC2C07649C00E6BADF /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AEB2C07649C00E6BADF /* CreditCardView.swift */; };
+		D9A36AEE2C07659800E6BADF /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AED2C07659800E6BADF /* ShopViewModel.swift */; };
+		D9A36AF02C076AFA00E6BADF /* ShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AEF2C076AFA00E6BADF /* ShopItemView.swift */; };
+		D9A36AF22C076B2000E6BADF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AF12C076B2000E6BADF /* CartViewModel.swift */; };
+		D9A36AF42C07796C00E6BADF /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AF32C07796B00E6BADF /* UserLocation.swift */; };
+		D9A36AF62C077D8300E6BADF /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AF52C077D8300E6BADF /* SettingsViewModel.swift */; };
 		DF0544652C064AEB00956BF1 /* PaymentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544642C064AEB00956BF1 /* PaymentTests.swift */; };
 		DF0544672C06580900956BF1 /* DBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544662C06580900956BF1 /* DBManagerTests.swift */; };
 		DF0544692C0670F300956BF1 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544682C0670F300956BF1 /* LoginScreenTests.swift */; };
@@ -56,7 +65,6 @@
 		C77412F72C04FE1600371B00 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C77412F82C04FE3700371B00 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C77C41E12C00EA1A00F51BF5 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
-		C77C716A2C02750600B2AB8C /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		C77EA2D82C0108B400BCB908 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C781B1032C05A42500E42A57 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		C782B31D2C01DA0C00895999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -75,10 +83,20 @@
 		C78DE2D22C009B260067C844 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		C78DE2D42C009B410067C844 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		C78DE2D62C009B5C0067C844 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		C78DE2D82C00A50F0067C844 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 		C78DE2DA2C00A7A30067C844 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D93770C52C0384930017A894 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D93770C92C0398830017A894 /* FoodieDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodieDB.db; sourceTree = "<group>"; };
+		D9A36AE12C0753C600E6BADF /* SecureTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextFieldView.swift; sourceTree = "<group>"; };
+		D9A36AE32C075A7F00E6BADF /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		D9A36AE52C075B6000E6BADF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D9A36AE72C075FF300E6BADF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D9A36AE92C0763FE00E6BADF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D9A36AEB2C07649C00E6BADF /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		D9A36AED2C07659800E6BADF /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		D9A36AEF2C076AFA00E6BADF /* ShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemView.swift; sourceTree = "<group>"; };
+		D9A36AF12C076B2000E6BADF /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		D9A36AF32C07796B00E6BADF /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		D9A36AF52C077D8300E6BADF /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DF0544642C064AEB00956BF1 /* PaymentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTests.swift; sourceTree = "<group>"; };
 		DF0544662C06580900956BF1 /* DBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerTests.swift; sourceTree = "<group>"; };
 		DF0544682C0670F300956BF1 /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
@@ -133,25 +151,12 @@
 		C78DE2A02C008FA20067C844 /* Foodie */ = {
 			isa = PBXGroup;
 			children = (
-				C781B1032C05A42500E42A57 /* MapManager.swift */,
-				D93770C92C0398830017A894 /* FoodieDB.db */,
-				C77C716A2C02750600B2AB8C /* CreditCard.swift */,
+				D9A36AE02C074FD900E6BADF /* ViewModels */,
+				D9A36ADF2C074FCF00E6BADF /* Views */,
+				D9A36ADE2C074FC300E6BADF /* Models */,
 				C782B31D2C01DA0C00895999 /* Info.plist */,
-				C78DE2A12C008FA20067C844 /* FoodieApp.swift */,
-				C78DE2A32C008FA20067C844 /* ContentView.swift */,
 				C78DE2A52C008FF40067C844 /* Assets.xcassets */,
 				C78DE2A72C008FF40067C844 /* Preview Content */,
-				C78DE2D02C009AF40067C844 /* Shop.swift */,
-				C78DE2D22C009B260067C844 /* Registration.swift */,
-				C78DE2D42C009B410067C844 /* Login.swift */,
-				C78DE2D62C009B5C0067C844 /* Cart.swift */,
-				C78DE2D82C00A50F0067C844 /* ShopItem.swift */,
-				C78DE2DA2C00A7A30067C844 /* Data.swift */,
-				C77C41E12C00EA1A00F51BF5 /* Pages.swift */,
-				C77EA2D82C0108B400BCB908 /* Settings.swift */,
-				C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */,
-				C782B3202C01E06B00895999 /* Payment.swift */,
-				D93770C52C0384930017A894 /* DBManager.swift */,
 				C77412F62C04FE1000371B00 /* Localizable.strings */,
 			);
 			path = Foodie;
@@ -183,6 +188,52 @@
 				DFEC374C2C071AF3008835F5 /* RegistrarionScreenTests.swift */,
 			);
 			path = FoodieUITests;
+			sourceTree = "<group>";
+		};
+		D9A36ADE2C074FC300E6BADF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C78DE2DA2C00A7A30067C844 /* Data.swift */,
+				D93770C92C0398830017A894 /* FoodieDB.db */,
+				D9A36AE52C075B6000E6BADF /* User.swift */,
+				D9A36AF32C07796B00E6BADF /* UserLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9A36ADF2C074FCF00E6BADF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */,
+				C78DE2A12C008FA20067C844 /* FoodieApp.swift */,
+				C78DE2A32C008FA20067C844 /* ContentView.swift */,
+				C78DE2D22C009B260067C844 /* Registration.swift */,
+				C78DE2D42C009B410067C844 /* Login.swift */,
+				C77C41E12C00EA1A00F51BF5 /* Pages.swift */,
+				C78DE2D02C009AF40067C844 /* Shop.swift */,
+				C78DE2D62C009B5C0067C844 /* Cart.swift */,
+				C782B3202C01E06B00895999 /* Payment.swift */,
+				C77EA2D82C0108B400BCB908 /* Settings.swift */,
+				D9A36AE12C0753C600E6BADF /* SecureTextFieldView.swift */,
+				D9A36AE92C0763FE00E6BADF /* SearchView.swift */,
+				D9A36AEB2C07649C00E6BADF /* CreditCardView.swift */,
+				D9A36AEF2C076AFA00E6BADF /* ShopItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9A36AE02C074FD900E6BADF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C781B1032C05A42500E42A57 /* MapManager.swift */,
+				D93770C52C0384930017A894 /* DBManager.swift */,
+				D9A36AE32C075A7F00E6BADF /* RegistrationViewModel.swift */,
+				D9A36AE72C075FF300E6BADF /* LoginViewModel.swift */,
+				D9A36AED2C07659800E6BADF /* ShopViewModel.swift */,
+				D9A36AF12C076B2000E6BADF /* CartViewModel.swift */,
+				D9A36AF52C077D8300E6BADF /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,21 +370,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A36AEA2C0763FF00E6BADF /* SearchView.swift in Sources */,
 				C77C41E22C00EA1A00F51BF5 /* Pages.swift in Sources */,
+				D9A36AE42C075A7F00E6BADF /* RegistrationViewModel.swift in Sources */,
+				D9A36AF02C076AFA00E6BADF /* ShopItemView.swift in Sources */,
+				D9A36AEC2C07649C00E6BADF /* CreditCardView.swift in Sources */,
 				C781B1042C05A42600E42A57 /* MapManager.swift in Sources */,
 				C782B31F2C01DB8C00895999 /* LaunchScreenView.swift in Sources */,
 				C782B3212C01E06C00895999 /* Payment.swift in Sources */,
 				C78DE2D52C009B410067C844 /* Login.swift in Sources */,
 				C78DE2DB2C00A7A30067C844 /* Data.swift in Sources */,
-				C77C716B2C02750700B2AB8C /* CreditCard.swift in Sources */,
+				D9A36AF42C07796C00E6BADF /* UserLocation.swift in Sources */,
+				D9A36AF22C076B2000E6BADF /* CartViewModel.swift in Sources */,
 				C78DE2A42C008FA20067C844 /* ContentView.swift in Sources */,
 				C77EA2D92C0108B400BCB908 /* Settings.swift in Sources */,
 				D93770C62C0384930017A894 /* DBManager.swift in Sources */,
 				C78DE2D12C009AF70067C844 /* Shop.swift in Sources */,
-				C78DE2D92C00A5100067C844 /* ShopItem.swift in Sources */,
 				C78DE2D32C009B260067C844 /* Registration.swift in Sources */,
+				D9A36AE62C075B6000E6BADF /* User.swift in Sources */,
 				C78DE2A22C008FA20067C844 /* FoodieApp.swift in Sources */,
 				C78DE2D72C009B5C0067C844 /* Cart.swift in Sources */,
+				D9A36AE82C075FF300E6BADF /* LoginViewModel.swift in Sources */,
+				D9A36AE22C0753C600E6BADF /* SecureTextFieldView.swift in Sources */,
+				D9A36AEE2C07659800E6BADF /* ShopViewModel.swift in Sources */,
+				D9A36AF62C077D8300E6BADF /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
