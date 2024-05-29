@@ -5,8 +5,9 @@
 
 # Installation
 
-# Contributing
+# Usage
 
+# Contributing
 ## Авторы проекта: **Ладик Алина, Сергиенко Лев, Шейнин Василий, Башев Ян.**
 
 1. **Team Lead:** Шейнин Василий.
