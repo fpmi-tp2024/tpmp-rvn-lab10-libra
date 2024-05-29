@@ -1,6 +1,6 @@
 # Схема базы данных
 
-[Home](../index.md)    
+[Home](index.md)    
 [Функциональные требования](functionalRequirements.md)  
 [Спецификация проекта](specification.md)  
 [Дополнительная спецификация](dopSpecification.md)   
