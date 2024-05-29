@@ -1,6 +1,6 @@
 # Функциональные требования
 
-[Home](../index.md)    
+[Home](index.md)    
 [Функциональные требования](functionalRequirements.md)  
 [Спецификация](specification.md)  
 [Дополнительная спецификация](dopSpecification.md)   
