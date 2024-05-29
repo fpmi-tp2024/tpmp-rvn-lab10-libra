@@ -21,17 +21,17 @@ class LoginScreenTests: XCTestCase {
             app.buttons["Login"].tap()
 
             // Type the username.
-            let usernameTextField = app.textFields["tLogin"]
+            let usernameTextField = app.textFields["LoginField"]
             usernameTextField.tap()
             usernameTextField.typeText("1")
 
             // Type the password.
-            let passwordTextField = app.secureTextFields["lPassword"]
+            let passwordTextField = app.secureTextFields["PasswordField"]
             passwordTextField.tap()
             passwordTextField.typeText("1")
 
             // Tap the login button.
-            app.buttons["Confirm password"].tap()
+            app.buttons["ConfirmButton"].tap()
 
             // Check that the login screen is no longer visible.
             XCTAssertFalse(app.navigationBars["Login"].exists)
@@ -45,17 +45,17 @@ class LoginScreenTests: XCTestCase {
             app.buttons["Login"].tap()
 
             // Type the username.
-            let usernameTextField = app.textFields["tLogin"]
+            let usernameTextField = app.textFields["LoginField"]
             usernameTextField.tap()
             usernameTextField.typeText("1")
 
             // Type the wrong password.
-            let passwordTextField = app.secureTextFields["lPassword"]
+            let passwordTextField = app.secureTextFields["PasswordField"]
             passwordTextField.tap()
             passwordTextField.typeText("2")
 
             // Tap the login button.
-            app.buttons["Confirm password"].tap()
+            app.buttons["ConfirmButton"].tap()
 
             // Check that the error alert is visible.
             XCTAssertTrue(app.alerts["Error"].exists)
@@ -64,7 +64,7 @@ class LoginScreenTests: XCTestCase {
             app.buttons["OK"].tap()
 
             // Check that the login screen is still visible.
-            XCTAssertTrue(app.buttons["Confirm password"].exists)
+            XCTAssertTrue(app.buttons["ConfirmButton"].exists)
         }
 
 }

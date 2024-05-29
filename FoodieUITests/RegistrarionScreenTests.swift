@@ -26,11 +26,10 @@ class RegistrarionScreenTests: XCTestCase {
 
         app.buttons["Register"].tap()
 
-        let emailTextField = app.textFields["lEmail"]
-        let loginTextField = app.textFields["tLogin"]
-        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
-        let passwordTextField = element.children(matching: .secureTextField).matching(identifier: "lPassword").element(boundBy: 0)
-        let confirmPasswordTextField = element.children(matching: .secureTextField).matching(identifier: "lPassword").element(boundBy: 1)
+        let emailTextField = app.textFields["EmailField"]
+        let loginTextField = app.textFields["LoginField"]
+        let passwordTextField = app.secureTextFields["PasswordField"]
+        let confirmPasswordTextField = app.secureTextFields["ConfirmPasswordField"]
 
         emailTextField.tap()
         emailTextField.typeText("test@example.com")
@@ -44,13 +43,16 @@ class RegistrarionScreenTests: XCTestCase {
         confirmPasswordTextField.tap()
         confirmPasswordTextField.typeText("p")
 
-        app.buttons["Confirm"].tap()
+        app.buttons["ConfirmButton"].tap()
 
         XCTAssertFalse(app.alerts["Error"].exists)
         
-        XCTAssert(element.waitForExistence(timeout: 15))
+        // Wait for a specific amount of time
+        let expectation = XCTestExpectation(description: "Wait for 5 seconds")
+        let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
+        XCTAssertEqual(result, .timedOut)
         
-        XCTAssertTrue(app.textFields["tSearch"].exists)
+        XCTAssertTrue(app.textFields["SearchField"].exists)
     }
     
     func testFailedRegistrationNotMatchingPasswords() throws {
@@ -59,11 +61,10 @@ class RegistrarionScreenTests: XCTestCase {
 
         app.buttons["Register"].tap()
 
-        let emailTextField = app.textFields["lEmail"]
-        let loginTextField = app.textFields["tLogin"]
-        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
-        let passwordTextField = element.children(matching: .secureTextField).matching(identifier: "lPassword").element(boundBy: 0)
-        let confirmPasswordTextField = element.children(matching: .secureTextField).matching(identifier: "lPassword").element(boundBy: 1)
+        let emailTextField = app.textFields["EmailField"]
+        let loginTextField = app.textFields["LoginField"]
+        let passwordTextField = app.secureTextFields["PasswordField"]
+        let confirmPasswordTextField = app.secureTextFields["ConfirmPasswordField"]
 
         emailTextField.tap()
         emailTextField.typeText("test@example.com")
@@ -77,7 +78,7 @@ class RegistrarionScreenTests: XCTestCase {
         confirmPasswordTextField.tap()
         confirmPasswordTextField.typeText("passss")
 
-        app.buttons["Confirm"].tap()
+        app.buttons["ConfirmButton"].tap()
 
         XCTAssertTrue(app.alerts["Error"].exists)
     }
@@ -88,11 +89,10 @@ class RegistrarionScreenTests: XCTestCase {
 
         app.buttons["Register"].tap()
 
-        let emailTextField = app.textFields["lEmail"]
-        let loginTextField = app.textFields["tLogin"]
-        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
-        let passwordTextField = element.children(matching: .secureTextField).matching(identifier: "lPassword").element(boundBy: 0)
-        let confirmPasswordTextField = element.children(matching: .secureTextField).matching(identifier: "lPassword").element(boundBy: 1)
+        let emailTextField = app.textFields["EmailField"]
+        let loginTextField = app.textFields["LoginField"]
+        let passwordTextField = app.secureTextFields["PasswordField"]
+        let confirmPasswordTextField = app.secureTextFields["ConfirmPasswordField"]
 
         emailTextField.tap()
         emailTextField.typeText("test@example.com")
@@ -106,11 +106,9 @@ class RegistrarionScreenTests: XCTestCase {
         confirmPasswordTextField.tap()
         confirmPasswordTextField.typeText("")
 
-        app.buttons["Confirm"].tap()
+        app.buttons["ConfirmButton"].tap()
 
         XCTAssertTrue(app.alerts["Error"].exists)
     }
-
-
 
 }

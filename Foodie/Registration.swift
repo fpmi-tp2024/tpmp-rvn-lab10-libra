@@ -12,6 +12,7 @@ struct SecureTextField: View {
             HStack {
                 if isSecureField {
                     SecureField("lPassword", text: $text)
+                        .accessibility(identifier: "PasswordField")
                     
                 } else {
                     TextField("tPassword", text: $text)
@@ -59,6 +60,7 @@ struct Registration: View {
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
+                    .accessibility(identifier: "LoginField")
                 
             }
             VStack(alignment: .leading, spacing: 5) {
@@ -69,6 +71,7 @@ struct Registration: View {
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
+                    .accessibility(identifier: "EmailField")
                 
             }
             VStack(alignment: .leading, spacing: 5) {
@@ -89,6 +92,7 @@ struct Registration: View {
                     .padding()
                     .cornerRadius(10)
                     .border(Color.blue, width: 1)
+                    .accessibility(identifier: "ConfirmPasswordField")
             }
             VStack() {
                 Spacer()
@@ -117,7 +121,9 @@ struct Registration: View {
                             .foregroundColor(.green)
                         Text("bConfirm")
                             .foregroundColor(.white)
-                            .bold()                    }
+                            .bold()
+                            .accessibility(identifier: "ConfirmButton")
+                    }
                 }
                 .frame(width: 200, height: 40)
                 
