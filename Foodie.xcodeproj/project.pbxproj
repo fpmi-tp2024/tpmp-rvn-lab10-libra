@@ -31,6 +31,7 @@
 		DF0544652C064AEB00956BF1 /* PaymentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544642C064AEB00956BF1 /* PaymentTests.swift */; };
 		DF0544672C06580900956BF1 /* DBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544662C06580900956BF1 /* DBManagerTests.swift */; };
 		DF0544692C0670F300956BF1 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544682C0670F300956BF1 /* LoginScreenTests.swift */; };
+		DFEC374D2C071AF3008835F5 /* RegistrarionScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC374C2C071AF3008835F5 /* RegistrarionScreenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		DF0544642C064AEB00956BF1 /* PaymentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTests.swift; sourceTree = "<group>"; };
 		DF0544662C06580900956BF1 /* DBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerTests.swift; sourceTree = "<group>"; };
 		DF0544682C0670F300956BF1 /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
+		DFEC374C2C071AF3008835F5 /* RegistrarionScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarionScreenTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				C78DE2C12C008FF60067C844 /* FoodieUITests.swift */,
 				C78DE2C32C008FF60067C844 /* FoodieUITestsLaunchTests.swift */,
 				DF0544682C0670F300956BF1 /* LoginScreenTests.swift */,
+				DFEC374C2C071AF3008835F5 /* RegistrarionScreenTests.swift */,
 			);
 			path = FoodieUITests;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEC374D2C071AF3008835F5 /* RegistrarionScreenTests.swift in Sources */,
 				DF0544692C0670F300956BF1 /* LoginScreenTests.swift in Sources */,
 				C78DE2C42C008FF60067C844 /* FoodieUITestsLaunchTests.swift in Sources */,
 				C78DE2C22C008FF60067C844 /* FoodieUITests.swift in Sources */,
