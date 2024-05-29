@@ -18,6 +18,7 @@ struct SearchView : View {
             TextField("tSearch", text :$searchText)
                 .foregroundColor(.black)
                 .frame(height:50)
+                .accessibility(identifier: "SearchField")
             Button(action: {
                 searchText = ""
             }) {

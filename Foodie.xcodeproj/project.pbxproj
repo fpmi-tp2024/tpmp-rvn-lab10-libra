@@ -37,7 +37,7 @@
 		D9A36AF22C076B2000E6BADF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AF12C076B2000E6BADF /* CartViewModel.swift */; };
 		D9A36AF42C07796C00E6BADF /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AF32C07796B00E6BADF /* UserLocation.swift */; };
 		D9A36AF62C077D8300E6BADF /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AF52C077D8300E6BADF /* SettingsViewModel.swift */; };
-		DF0544652C064AEB00956BF1 /* PaymentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544642C064AEB00956BF1 /* PaymentTests.swift */; };
+		DF0544652C064AEB00956BF1 /* MapManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544642C064AEB00956BF1 /* MapManagerTests.swift */; };
 		DF0544672C06580900956BF1 /* DBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544662C06580900956BF1 /* DBManagerTests.swift */; };
 		DF0544692C0670F300956BF1 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0544682C0670F300956BF1 /* LoginScreenTests.swift */; };
 		DFEC374D2C071AF3008835F5 /* RegistrarionScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC374C2C071AF3008835F5 /* RegistrarionScreenTests.swift */; };
@@ -97,7 +97,7 @@
 		D9A36AF12C076B2000E6BADF /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		D9A36AF32C07796B00E6BADF /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		D9A36AF52C077D8300E6BADF /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		DF0544642C064AEB00956BF1 /* PaymentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTests.swift; sourceTree = "<group>"; };
+		DF0544642C064AEB00956BF1 /* MapManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManagerTests.swift; sourceTree = "<group>"; };
 		DF0544662C06580900956BF1 /* DBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerTests.swift; sourceTree = "<group>"; };
 		DF0544682C0670F300956BF1 /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
 		DFEC374C2C071AF3008835F5 /* RegistrarionScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarionScreenTests.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		C78DE2B62C008FF60067C844 /* FoodieTests */ = {
 			isa = PBXGroup;
 			children = (
-				DF0544642C064AEB00956BF1 /* PaymentTests.swift */,
+				DF0544642C064AEB00956BF1 /* MapManagerTests.swift */,
 				DF0544662C06580900956BF1 /* DBManagerTests.swift */,
 			);
 			path = FoodieTests;
@@ -401,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0544652C064AEB00956BF1 /* PaymentTests.swift in Sources */,
+				DF0544652C064AEB00956BF1 /* MapManagerTests.swift in Sources */,
 				DF0544672C06580900956BF1 /* DBManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

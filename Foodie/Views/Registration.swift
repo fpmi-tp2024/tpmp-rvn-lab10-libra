@@ -29,6 +29,7 @@ struct Registration: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "LoginField")
                     
                 }
                 VStack(alignment: .leading, spacing: 5) {
@@ -39,6 +40,7 @@ struct Registration: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "EmailField")
                     
                 }
                 VStack(alignment: .leading, spacing: 5) {
@@ -49,6 +51,7 @@ struct Registration: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "PasswordField")
                     
                 }
                 VStack(alignment: .leading, spacing: 5) {
@@ -59,6 +62,7 @@ struct Registration: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "ConfirmPasswordField")
                 }
                 VStack() {
                     Spacer()
@@ -81,6 +85,7 @@ struct Registration: View {
                             Text("bConfirm")
                                 .foregroundColor(.white)
                                 .bold()
+                                .accessibility(identifier: "ConfirmButton")
                         }
                     }
                     .frame(width: 200, height: 40)
