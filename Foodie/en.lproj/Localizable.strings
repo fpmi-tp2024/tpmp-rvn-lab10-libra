@@ -97,4 +97,13 @@
 "lDate" = "Date and time of delivery";
 
 
+// Database values:
 
+"Burger" = "Burger";
+"Coffee" = "Coffee";
+"French Fries" = "French Fries";
+"Fried Chicken" = "Fried Chicken";
+"Hotdog" = "Hotdog";
+"Ice-Cream" = "Ice-Cream";
+"Pizza" = "Pizza";
+"Pork" = "Pork";
