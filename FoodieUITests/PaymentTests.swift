@@ -28,10 +28,9 @@ class PaymentTests: XCTestCase {
         app.tabBars["Tab Bar"].buttons["CartButton"].tap()
         UITestsHelper.waitForSeconds(2)
         
-        let tablesQuery = app.tables
-        XCTAssertTrue(tablesQuery.children(matching: .cell).matching(identifier: "coffee, Coffee, $3.25").element(boundBy: 0).exists)
-        XCTAssertTrue(tablesQuery.children(matching: .cell).matching(identifier: "coffee, Coffee, $3.25").element(boundBy: 1).exists)
-        XCTAssertTrue(tablesQuery.children(matching: .cell).matching(identifier: "burger, Burger, $5.50").element(boundBy: 0).exists)
+        XCTAssertTrue(app.staticTexts["0coffee"].exists)
+        XCTAssertTrue(app.staticTexts["1coffee"].exists)
+        XCTAssertTrue(app.staticTexts["2burger"].exists)
         
         XCTAssertTrue(app.staticTexts["$12.00"].exists)
         XCTAssertFalse(app.staticTexts["$0.00"].exists)
@@ -57,24 +56,27 @@ class PaymentTests: XCTestCase {
         
         let elementsQuery2 = app.scrollViews.otherElements
         
-        let tablesQuery = elementsQuery2.tables
+        let cardHolderNameTextField = app.textFields["cardHolderNameTextField"]
+        let cardNumberTextField = app.textFields["cardNumberTextField"]
+        let expirationDateTextField = app.textFields["expirationDateTextField"]
+        let ccvCodeTextField = app.textFields["ccvCodeTextField"]
+
+        cardHolderNameTextField.tap()
+        cardHolderNameTextField.typeText("max")
+
+        cardNumberTextField.tap()
+        cardNumberTextField.typeText("1111 1111 1111 1111")
+
+        expirationDateTextField.tap()
+        expirationDateTextField.typeText("11/11/2023")
+
+        ccvCodeTextField.tap()
+        ccvCodeTextField.typeText("223")
         
-        tablesQuery.textFields["Cardholder's Name"].tap()
-        tablesQuery.textFields["Cardholder's Name"].typeText("max")
-        
-        tablesQuery.textFields["Card Nubmer"].tap()
-        tablesQuery.textFields["Card Nubmer"].typeText("1111 1111 1111 1111")
-        
-        tablesQuery.textFields["Expiry Date"].tap()
-        tablesQuery.textFields["Expiry Date"].typeText("11/11/2023")
-        
-        tablesQuery.textFields["CCV"].tap()
-        tablesQuery.textFields["CCV"].typeText("223")
-        
-        let deliveryAdressTextField = elementsQuery2.textFields["Delivery Adress"]
+        let deliveryAdressTextField = elementsQuery2.textFields["adressTextField"]
         deliveryAdressTextField.tap()
         deliveryAdressTextField.typeText("Minsk")
-        elementsQuery2.buttons["Confirm Pay"].tap()
+        elementsQuery2.buttons["confirmButton"].tap()
         
         XCTAssertFalse(app.staticTexts["$12.00"].exists)
         XCTAssertTrue(app.staticTexts["$0.00"].exists)

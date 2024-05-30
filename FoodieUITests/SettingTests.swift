@@ -68,4 +68,63 @@ class SettingTests: XCTestCase {
         
         XCTAssertTrue(app.alerts["Failure"].exists)
     }
+    
+    func testSuccessfulUpdate() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        // Ensure the app is registered and navigated to the Settings page
+        UITestsHelper.registerSuccessfully(in: app)
+        
+        let tabBar = app.tabBars["Tab Bar"]
+        tabBar.buttons["SettingsButton"].tap()
+        UITestsHelper.waitForSeconds(5)
+        
+        let scrollViewsQuery = app.scrollViews
+        let personElement = scrollViewsQuery.otherElements.containing(.image, identifier:"person").element
+        personElement.swipeUp()
+        
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        elementsQuery.textFields["LoginField"].tap()
+        elementsQuery.textFields["LoginField"].typeText("new")
+        
+        elementsQuery.textFields["EmailField"].tap()
+        elementsQuery.textFields["EmailField"].typeText("new")
+        
+        elementsQuery.secureTextFields["PasswordField"].tap()
+        elementsQuery.secureTextFields["PasswordField"].typeText("new")
+        
+        elementsQuery.buttons["UpdateButton"].tap()
+        UITestsHelper.waitForSeconds(5)
+        
+        XCTAssertTrue(app.alerts["Success"].exists)
+        XCTAssertFalse(app.alerts["Failure"].exists)
+        app.buttons["OK"].tap()
+        
+        tabBar.buttons["MenuButton"].tap()
+        UITestsHelper.waitForSeconds(5)
+        
+        app.buttons["BackButton"].tap()
+        app.buttons["OK"].tap()
+
+        app.buttons["LoginButton"].tap()
+
+        // Type the username.
+        let usernameTextField = app.textFields["LoginField"]
+        usernameTextField.tap()
+        usernameTextField.typeText("new")
+
+        // Type the password.
+        let passwordTextField = app.secureTextFields["PasswordField"]
+        passwordTextField.tap()
+        passwordTextField.typeText("new")
+
+        // Tap the login button.
+        app.buttons["ConfirmButton"].tap()
+    
+        UITestsHelper.waitForSeconds(5)
+
+        XCTAssertTrue(app.textFields["SearchField"].exists)
+    }
 }

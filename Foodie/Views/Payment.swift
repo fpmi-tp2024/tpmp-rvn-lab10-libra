@@ -61,6 +61,7 @@ struct Payment: View {
                         .padding()
                         .background(Color.mint)
                         .cornerRadius(10)
+                        .accessibility(identifier: "adressTextField")
                 } else {
                     // Fallback on earlier versions
                 }
@@ -108,6 +109,7 @@ struct Payment: View {
                         }
                     }
                     .offset(x: 80)
+                    .accessibility(identifier: "confirmButton")
                 }
                 
             }

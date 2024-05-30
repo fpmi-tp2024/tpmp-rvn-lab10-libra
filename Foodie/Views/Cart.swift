@@ -30,6 +30,7 @@ struct Cart: View {
                             Text("$\(String(format: "%.2f", cartItems[item][2] as! Double))")
                                 .foregroundColor(.gray)
                         }
+                        .accessibility(identifier: "\(item)\(cartItems[item][0] as! String)")
                     }
                 }
                 .onDelete{indexSet in

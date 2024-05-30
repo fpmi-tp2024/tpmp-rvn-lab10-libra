@@ -45,6 +45,7 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "LoginField")
 
                 }
                 .frame(width: 350)
@@ -57,6 +58,7 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "EmailField")
 
                 }
                 .frame(width: 350)
@@ -69,6 +71,7 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "PasswordField")
 
                 }
                 .frame(width: 350)
