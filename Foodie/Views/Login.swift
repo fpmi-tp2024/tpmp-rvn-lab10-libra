@@ -33,6 +33,7 @@ struct Login: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "LoginField")
                 }
 
                 VStack(alignment: .leading, spacing: 5) {
@@ -43,6 +44,7 @@ struct Login: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "PasswordField")
                 }
                 
                 VStack() {
@@ -69,6 +71,7 @@ struct Login: View {
                         }
                     }
                     .frame(width: 200, height: 40)
+                    .accessibility(identifier: "ConfirmButton")
                 }
             }
             .padding()

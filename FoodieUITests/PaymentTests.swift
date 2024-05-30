@@ -104,7 +104,7 @@ class PaymentTests: XCTestCase {
         app.buttons["PayCashPick"].tap()
         UITestsHelper.waitForSeconds(5)
         
-        let deliveryAdressTextField = app.textFields["adressTextField"]
+        let deliveryAdressTextField = app.scrollViews.otherElements.textFields["adressTextField"]
         deliveryAdressTextField.tap()
         deliveryAdressTextField.typeText("Minsk")
         
