@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Secure Text Field View
+
 struct SecureTextField: View {
     @State private var isSecureField: Bool = true
     @Binding var text: String

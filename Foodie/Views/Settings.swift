@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Settings Page View
+
 struct Settings: View {
     
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
@@ -17,6 +19,7 @@ struct Settings: View {
         NavigationView {
             ScrollView() {
             VStack(spacing: 30) {
+                // MARK: - User Info
                 Image(systemName: "person")
                     .resizable()
                     .frame(width: 120,height: 120)
@@ -36,6 +39,8 @@ struct Settings: View {
                     .accessibility(identifier: "SwitchThemeToggle")
                 }
                 .frame(width: 350)
+                
+                // MARK: - Change user info text fields
                 
                 VStack(alignment: .leading, spacing: 5) {
                     Text("lLogin")
@@ -76,6 +81,8 @@ struct Settings: View {
                 }
                 .frame(width: 350)
                 
+                // MARK: - Confirm changes Button
+                
                 Spacer()
                 Button {
                     settingsViewModel.updateUserInfoButtonClick()
@@ -98,6 +105,8 @@ struct Settings: View {
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
 }
+
+// MARK: - Settings Page Preview
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {

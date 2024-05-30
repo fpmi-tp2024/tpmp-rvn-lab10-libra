@@ -12,7 +12,7 @@ struct FoodieApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
         }
     }
 }

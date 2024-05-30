@@ -8,8 +8,11 @@
 import SwiftUI
 
 class CartViewModel: ObservableObject {
+    // MARK: - Cart View Observable items
     
     @Published var totalPrice = 0.00
+    
+    // MARK: - Methods required for Cart View
     
     func calculateTotalPriceForCart(cartItems: [[Any]]) {
         totalPrice = 0.00

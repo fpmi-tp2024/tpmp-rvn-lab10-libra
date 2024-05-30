@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Credit Card Front View
+
 struct CardFrontView: View {
     
     let creditCardInfo: CreditCardInfo
@@ -61,12 +63,16 @@ struct CardFrontView: View {
     }
 }
 
+// MARK: - Credit Card Info
+
 struct CreditCardInfo {
     var cardHolderName: String = ""
     var cardNumber: String = ""
     var expirationDate: String = ""
     var ccvCode: String = ""
 }
+
+// MARK: - Checkout Form View
 
 @available(iOS 15.0, *)
 
@@ -99,6 +105,8 @@ struct CheckoutFormView: View {
         
     }
 }
+
+// MARK: - Credit Card Back View
 
 @available(iOS 15.0, *)
 struct CardBackView: View {
@@ -144,6 +152,8 @@ struct CardBackView: View {
         }
     }
 }
+
+// MARK: - Credit Card View
 
 @available(iOS 15.0, *)
 struct CreditCard: View {
@@ -191,6 +201,8 @@ struct CreditCard: View {
         } .frame(height:600)
     }
 }
+
+// MARK: - Credit Card Preview
 
 struct CreditCard_Previews: PreviewProvider {
     static var previews: some View {

@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+// MARK: - Cart Page View
+
 struct Cart: View {    
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @State private var showPaymentScreen = false
@@ -16,6 +18,8 @@ struct Cart: View {
     
     var body: some View {
         VStack {
+            // MARK: - Cart items
+            
             Text("lMyCart")
                 .font(.system(size: 44, weight: .semibold, design: .rounded))
                 .frame(width: 320, alignment: .leading)
@@ -39,6 +43,8 @@ struct Cart: View {
                 }
             }
             Spacer()
+            // MARK: - Go to payment Button
+
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.green)
@@ -84,6 +90,8 @@ struct Cart: View {
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
 }
+
+// MARK: - Cart Page Preview
 
 struct Cart_Previews: PreviewProvider {
     static var previews: some View {

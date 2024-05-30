@@ -8,6 +8,8 @@
 import MapKit
 
 final class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+    // MARK: - MapManager variables
+    
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 53.89580, longitude: 27.55898), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     @Published var userLocation: CLLocationCoordinate2D? = nil
     
@@ -15,6 +17,8 @@ final class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     
     var locationManager: CLLocationManager?
+    
+    // MARK: - MapManager methods for checking accessibility
     
     func checkIfLocationServicesEnabled() {
         if (CLLocationManager.locationServicesEnabled()) {
@@ -53,6 +57,8 @@ final class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.userLocation = userLocation.coordinate
         self.region = MKCoordinateRegion(center: userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     }
+    
+    // MARK: - MapManager methods for fetching locations
     
     func getClosestLocations(userLocation: CLLocationCoordinate2D) -> [Location] {
         var distances: [CLLocationDistance] = []

@@ -8,6 +8,8 @@
 import Foundation
 
 class ShopViewModel: ObservableObject {
+    // MARK: - Shop View Observable items
+    
     @Published var filteredItems = shopItems
     @Published var searchText: String = "" {
         didSet {

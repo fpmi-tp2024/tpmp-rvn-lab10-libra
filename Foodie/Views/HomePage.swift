@@ -7,7 +7,10 @@
 
 import SwiftUI
 import CoreData
-struct ContentView: View {
+
+// MARK: - Home Page View
+
+struct HomePage: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @State private var showLoginScreen = false
     @State private var showRegisterScreen = false
@@ -72,8 +75,10 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Home Page Preview
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomePage()
     }
 }

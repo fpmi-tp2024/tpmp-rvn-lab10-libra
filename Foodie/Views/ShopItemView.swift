@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Shop Item View
+
 struct ShopItem: View {
     
     @Binding var cartItems: [[Any]]
@@ -40,6 +42,8 @@ struct ShopItem: View {
         }
     }
 }
+
+// MARK: - Shop Item Preview
 
 struct ShopItem_Previews: PreviewProvider {
     static var previews: some View {

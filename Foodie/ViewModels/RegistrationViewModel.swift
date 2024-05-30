@@ -8,6 +8,8 @@
 import Foundation
 
 class RegistrationViewModel: ObservableObject {
+    // MARK: - Registration View Observable items
+    
     @Published var email = "" {
         didSet {
             User.email = email
@@ -28,6 +30,8 @@ class RegistrationViewModel: ObservableObject {
             User.confirmPassword = confirmPassword
         }
     }
+    
+    // MARK: - Methods required for Registration View
     
     func isRegistrationCorrect() -> Bool {
         if (!email.isEmpty && !login.isEmpty && !password.isEmpty && !confirmPassword.isEmpty && password == confirmPassword) {

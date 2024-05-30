@@ -7,4 +7,6 @@
 
 import SwiftUI
 
+// MARK: - Shop Items
+
 var shopItems = DBManager.getItems()

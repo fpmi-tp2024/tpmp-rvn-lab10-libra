@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - User model structure
+
 struct User {
     static var email: String = ""
     static var login: String = ""

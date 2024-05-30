@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Shop Page View
+
 struct Shop: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @Environment(\.presentationMode) var presentationMode
@@ -22,7 +24,8 @@ struct Shop: View {
         
     var body: some View {
         NavigationView {
-        
+            // MARK: - Shop View inner contents
+            
             VStack(spacing: 5) {
                 SearchView(searchText: $shopViewModel.searchText)
                     .padding(.horizontal)
@@ -35,6 +38,10 @@ struct Shop: View {
                     }
                 }.padding(.bottom, 15)
             }
+            .navigationViewStyle(.stack)
+            .environment(\.colorScheme, isDarkTheme ? .dark : .light)
+            // MARK: - Shop View toolbar
+            
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -59,6 +66,8 @@ struct Shop: View {
         }
     }
 }
+
+// MARK: - Shop Page Preview
 
 struct Shop_Previews: PreviewProvider {
     static var previews: some View {
