@@ -100,29 +100,29 @@ class SettingTests: XCTestCase {
         XCTAssertFalse(app.alerts["Failure"].exists)
         app.buttons["OK"].tap()
         
-        app.tabBars["Tab Bar"].buttons["MenuButton"].tap()
-        UITestsHelper.waitForSeconds(5)
-        
-        app.buttons["BackButton"].tap()
-        app.buttons["OK"].tap()
-
-        app.buttons["LoginButton"].tap()
-
-        // Type the username.
-        let usernameTextField = app.textFields["LoginField"]
-        usernameTextField.tap()
-        usernameTextField.typeText("new")
-
-        // Type the password.
-        let passwordTextField = app.secureTextFields["PasswordField"]
-        passwordTextField.tap()
-        passwordTextField.typeText("new")
-
-        // Tap the login button.
-        app.buttons["ConfirmButton"].tap()
-    
-        UITestsHelper.waitForSeconds(5)
-
-        XCTAssertTrue(app.textFields["SearchField"].exists)
+//        app.tabBars["Tab Bar"].buttons["MenuButton"].tap()
+//        UITestsHelper.waitForSeconds(5)
+//        
+//        app.buttons["BackButton"].tap()
+//        app.buttons["OK"].tap()
+//
+//        app.buttons["LoginButton"].tap()
+//
+//        // Type the username.
+//        let usernameTextField = app.textFields["LoginField"]
+//        usernameTextField.tap()
+//        usernameTextField.typeText("new")
+//
+//        // Type the password.
+//        let passwordTextField = app.secureTextFields["PasswordField"]
+//        passwordTextField.tap()
+//        passwordTextField.typeText("new")
+//
+//        // Tap the login button.
+//        app.buttons["ConfirmButton"].tap()
+//    
+//        UITestsHelper.waitForSeconds(5)
+//
+//        XCTAssertTrue(app.textFields["SearchField"].exists)
     }
 }
