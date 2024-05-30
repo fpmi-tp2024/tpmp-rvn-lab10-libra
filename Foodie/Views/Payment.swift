@@ -27,7 +27,9 @@ struct Payment: View {
                 VStack {
                     Picker(selection: $selectedIndex, label :Text("")) {
                         Text("lCreditCard").tag(0)
+                            .accessibility(identifier: "PayCardPick")
                         Text("lCash").tag(1)
+                            .accessibility(identifier: "PayCashPick")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
