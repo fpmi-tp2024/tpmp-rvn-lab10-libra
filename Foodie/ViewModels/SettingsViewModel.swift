@@ -14,25 +14,25 @@ class SettingsViewModel: ObservableObject {
     @Published var isInputEmpty = true
     @Published var passwordIsEmpty = true {
         didSet {
-            isInputEmpty = isInputEmpty && passwordIsEmpty
+            isInputEmpty = loginIsEmpty && passwordIsEmpty && emailIsEmpty
         }
     }
     @Published var emailIsEmpty = true {
         didSet {
-            isInputEmpty = isInputEmpty && emailIsEmpty
+            isInputEmpty = loginIsEmpty && passwordIsEmpty && emailIsEmpty
         }
     }
     @Published var loginIsEmpty = true {
         didSet {
-            isInputEmpty = isInputEmpty && loginIsEmpty
+            isInputEmpty = loginIsEmpty && passwordIsEmpty && emailIsEmpty
         }
     }
     
     func updateUserInfoButtonClick() {
-        loginIsEmpty = login.isEmpty
         emailIsEmpty = email.isEmpty
+        loginIsEmpty = login.isEmpty
         passwordIsEmpty = password.isEmpty
-
+        
         if (!loginIsEmpty) {
             UserDefaults.standard.setValue(login, forKey: "login")
             User.login = login
@@ -48,13 +48,14 @@ class SettingsViewModel: ObservableObject {
             User.password = password
             User.confirmPassword = password
         }
+
+        login = ""
+        email = ""
+        password = ""
     }
     
     func informUser() -> Alert {
         if (!isInputEmpty) {
-            login = ""
-            email = ""
-            password = ""
             return Alert(title: Text("tSuccess"), message: Text("Changed \(loginIsEmpty ? "" : "login ")\(emailIsEmpty ? "" : "email ")\(passwordIsEmpty ? "" : "password")"), dismissButton: .default(Text("tok")))
         } else {
             return Alert(title: Text("tFail"), message: Text("alertEmpty"), dismissButton: .default(Text("tok")))

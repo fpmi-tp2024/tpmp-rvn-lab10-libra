@@ -14,6 +14,7 @@ struct Payment: View {
     @State private var deliveryDate = Date()
     @State private var selectedIndex = 0
     @State private var comment = ""
+    @State private var address = ""
     @State private var flip: Bool = false
     @State private var degrees: Double = 0
     @StateObject private var mapManager = MapManager()
@@ -55,13 +56,8 @@ struct Payment: View {
                 .accentColor(.red)
                 .frame(width:300, height:300)
 
-                    .onAppear{
-                        mapManager.checkIfLocationServicesEnabled()
-                    }
-                    .accentColor(.red)
-                    .frame(width:300, height:300)
                 if #available(iOS 15.0, *) {
-                    TextField("lAdress", text: $comment)
+                    TextField("lAdress", text: $address)
                         .padding()
                         .background(Color.mint)
                         .cornerRadius(10)
