@@ -50,3 +50,4 @@
 ## Физическая модель базы данных
 ![Data base schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/c6be41019be8de8aa56a439e9781663bf313a9bb/img/diagrams/db.png?raw=true)
 ## Диаграмма файлов
+![Files schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/1dde058573206e2963f07c2549f973077fc4a722/img/diagrams/files.jpeg?raw=true)
