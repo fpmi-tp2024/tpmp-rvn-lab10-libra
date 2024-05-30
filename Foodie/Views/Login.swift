@@ -29,7 +29,7 @@ struct Login: View {
                     Text("tELogin")
                         .font(.headline)
                         .foregroundColor(Color.blue)
-                    TextField("tLogin", text: $loginViewModel.login)
+                    TextField(NSLocalizedString("tLogin", comment: ""), text: $loginViewModel.login)
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)

@@ -44,7 +44,6 @@ struct HomePage: View {
                 .frame(width: 200, height: 35)
                 .fullScreenCover(isPresented: $showLoginScreen) {
                     Login(isLogged: $isLogged)
-                    //Pages()
                 }
                 Button(action: {
                     self.showRegisterScreen = true

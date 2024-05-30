@@ -17,10 +17,10 @@ struct SecureTextField: View {
         if #available(iOS 15.0, *) {
             HStack {
                 if isSecureField {
-                    SecureField("lPassword", text: $text)
+                    SecureField(NSLocalizedString("lPassword", comment: ""), text: $text)
                     
                 } else {
-                    TextField("tPassword", text: $text)
+                    TextField(NSLocalizedString("tPassword", comment: ""), text: $text)
                     
                 }
             }.overlay(alignment: .trailing) {

@@ -60,7 +60,7 @@ class SettingsViewModel: ObservableObject {
     
     func informUser() -> Alert {
         if (!isInputEmpty) {
-            return Alert(title: Text("tSuccess"), message: Text("Changed \(loginIsEmpty ? "" : "login ")\(emailIsEmpty ? "" : "email ")\(passwordIsEmpty ? "" : "password")"), dismissButton: .default(Text("tok")))
+            return Alert(title: Text("tSuccess"), message: Text(NSLocalizedString("lChanged", comment: "") + " " + NSLocalizedString((emailIsEmpty ? "" : "lEmail"), comment: "") + " " + NSLocalizedString((loginIsEmpty ? "" : "lLogin"), comment: "") + " " + NSLocalizedString((passwordIsEmpty ? "" : "lPassword"), comment: "")), dismissButton: .default(Text("tok")))
         } else {
             return Alert(title: Text("tFail"), message: Text("alertEmpty"), dismissButton: .default(Text("tok")))
         }
