@@ -100,7 +100,7 @@ class SettingTests: XCTestCase {
         XCTAssertFalse(app.alerts["Failure"].exists)
         app.buttons["OK"].tap()
         
-        tabBar.buttons["MenuButton"].tap()
+        app.buttons["MenuButton"].tap()
         UITestsHelper.waitForSeconds(5)
         
         app.buttons["BackButton"].tap()
