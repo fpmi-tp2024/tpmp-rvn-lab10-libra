@@ -102,8 +102,16 @@ class PaymentTests: XCTestCase {
         UITestsHelper.waitForSeconds(5)
         
         let elementsQuery2 = app.scrollViews.otherElements
-        elementsQuery2/*@START_MENU_TOKEN@*/.buttons["Cash"]/*[[".segmentedControls.buttons[\"Cash\"]",".buttons[\"Cash\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        elementsQuery2.buttons["Cash"].tap()
         UITestsHelper.waitForSeconds(5)
+        
+        let deliveryAdressTextField = elementsQuery2.textFields["adressTextField"]
+        deliveryAdressTextField.tap()
+        deliveryAdressTextField.typeText("Minsk")
+        elementsQuery2.buttons["confirmButton"].tap()
+        
+        XCTAssertFalse(app.staticTexts["$12.00"].exists)
+        XCTAssertTrue(app.staticTexts["$0.00"].exists)
     }
     
 }

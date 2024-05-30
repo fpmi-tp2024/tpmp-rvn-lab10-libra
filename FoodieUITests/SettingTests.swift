@@ -81,19 +81,17 @@ class SettingTests: XCTestCase {
         UITestsHelper.waitForSeconds(5)
         
         let scrollViewsQuery = app.scrollViews
-        let personElement = scrollViewsQuery.otherElements.containing(.image, identifier:"person").element
-        personElement.swipeUp()
         
         let elementsQuery = scrollViewsQuery.otherElements
         
-        elementsQuery.textFields["LoginField"].tap()
-        elementsQuery.textFields["LoginField"].typeText("new")
+        app.textFields["UpdateLoginField"].tap()
+        app.textFields["UpdateLoginField"].typeText("new")
         
-        elementsQuery.textFields["EmailField"].tap()
-        elementsQuery.textFields["EmailField"].typeText("new")
+        app.textFields["UpdateEmailField"].tap()
+        app.textFields["UpdateEmailField"].typeText("new")
         
-        elementsQuery.secureTextFields["PasswordField"].tap()
-        elementsQuery.secureTextFields["PasswordField"].typeText("new")
+        app.secureTextFields["UpdatePasswordField"].tap()
+        app.secureTextFields["UpdatePasswordField"].typeText("new")
         
         elementsQuery.buttons["UpdateButton"].tap()
         UITestsHelper.waitForSeconds(5)
