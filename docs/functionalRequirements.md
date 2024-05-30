@@ -24,7 +24,7 @@
 9. Локализация и интернационализация на 3 языках: русский, английский, французский
 
 # Диаграмма вариантов использования
-![use_case](https://github.com/fpmi-tp2024/tpmp-rvn-lab5-libra/blob/6ed8aa7117b954beda18f5ad4e92710aa1b4f257/UML%20diagrams/use_case.png?raw=true)
+![use_case](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/5cf92142b8b793dd6408e8dc3335ca8f5aa26e16/img/diagrams/useCase.jpeg?raw=true)
 
 # Сценарий для пользователя:
 1. Пользователь
