@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Pages View
+
 struct Pages: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @State private var cartItems: [[Any]] = []
@@ -32,6 +34,8 @@ struct Pages: View {
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
 }
+
+// MARK: - Pages Preview
 
 struct Pages_Previews: PreviewProvider {
     static var previews: some View {

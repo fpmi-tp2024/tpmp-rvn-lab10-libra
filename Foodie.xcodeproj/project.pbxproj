@@ -14,7 +14,7 @@
 		C782B31F2C01DB8C00895999 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */; };
 		C782B3212C01E06C00895999 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782B3202C01E06B00895999 /* Payment.swift */; };
 		C78DE2A22C008FA20067C844 /* FoodieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2A12C008FA20067C844 /* FoodieApp.swift */; };
-		C78DE2A42C008FA20067C844 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2A32C008FA20067C844 /* ContentView.swift */; };
+		C78DE2A42C008FA20067C844 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2A32C008FA20067C844 /* HomePage.swift */; };
 		C78DE2A62C008FF40067C844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78DE2A52C008FF40067C844 /* Assets.xcassets */; };
 		C78DE2A92C008FF40067C844 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78DE2A82C008FF40067C844 /* Preview Assets.xcassets */; };
 		C78DE2B82C008FF60067C844 /* FoodieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2B72C008FF60067C844 /* FoodieTests.swift */; };
@@ -27,6 +27,7 @@
 		C78DE2DB2C00A7A30067C844 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DE2DA2C00A7A30067C844 /* Data.swift */; };
 		D93770C62C0384930017A894 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93770C52C0384930017A894 /* DBManager.swift */; };
 		D93770CA2C0398840017A894 /* FoodieDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D93770C92C0398830017A894 /* FoodieDB.db */; };
+		D954C3EF2C0890CA0068B9A7 /* FoodieDB_structure.sql in Resources */ = {isa = PBXBuildFile; fileRef = D954C3EE2C0890CA0068B9A7 /* FoodieDB_structure.sql */; };
 		D9A36AE22C0753C600E6BADF /* SecureTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE12C0753C600E6BADF /* SecureTextFieldView.swift */; };
 		D9A36AE42C075A7F00E6BADF /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE32C075A7F00E6BADF /* RegistrationViewModel.swift */; };
 		D9A36AE62C075B6000E6BADF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A36AE52C075B6000E6BADF /* User.swift */; };
@@ -69,7 +70,7 @@
 		C782B3202C01E06B00895999 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		C78DE29E2C008FA20067C844 /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78DE2A12C008FA20067C844 /* FoodieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieApp.swift; sourceTree = "<group>"; };
-		C78DE2A32C008FA20067C844 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C78DE2A32C008FA20067C844 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C78DE2A52C008FF40067C844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C78DE2A82C008FF40067C844 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C78DE2B32C008FF60067C844 /* FoodieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +85,7 @@
 		C78DE2DA2C00A7A30067C844 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D93770C52C0384930017A894 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D93770C92C0398830017A894 /* FoodieDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodieDB.db; sourceTree = "<group>"; };
+		D954C3EE2C0890CA0068B9A7 /* FoodieDB_structure.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FoodieDB_structure.sql; sourceTree = "<group>"; };
 		D9A36AE12C0753C600E6BADF /* SecureTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextFieldView.swift; sourceTree = "<group>"; };
 		D9A36AE32C075A7F00E6BADF /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		D9A36AE52C075B6000E6BADF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -181,11 +183,20 @@
 			path = FoodieUITests;
 			sourceTree = "<group>";
 		};
+		D954C3ED2C08909F0068B9A7 /* FoodieDB */ = {
+			isa = PBXGroup;
+			children = (
+				D954C3EE2C0890CA0068B9A7 /* FoodieDB_structure.sql */,
+				D93770C92C0398830017A894 /* FoodieDB.db */,
+			);
+			path = FoodieDB;
+			sourceTree = "<group>";
+		};
 		D9A36ADE2C074FC300E6BADF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D954C3ED2C08909F0068B9A7 /* FoodieDB */,
 				C78DE2DA2C00A7A30067C844 /* Data.swift */,
-				D93770C92C0398830017A894 /* FoodieDB.db */,
 				D9A36AE52C075B6000E6BADF /* User.swift */,
 				D9A36AF32C07796B00E6BADF /* UserLocation.swift */,
 			);
@@ -197,7 +208,7 @@
 			children = (
 				C782B31E2C01DB8C00895999 /* LaunchScreenView.swift */,
 				C78DE2A12C008FA20067C844 /* FoodieApp.swift */,
-				C78DE2A32C008FA20067C844 /* ContentView.swift */,
+				C78DE2A32C008FA20067C844 /* HomePage.swift */,
 				C78DE2D22C009B260067C844 /* Registration.swift */,
 				C78DE2D42C009B410067C844 /* Login.swift */,
 				C77C41E12C00EA1A00F51BF5 /* Pages.swift */,
@@ -335,6 +346,7 @@
 			files = (
 				C78DE2A92C008FF40067C844 /* Preview Assets.xcassets in Resources */,
 				C77412F42C04FE1000371B00 /* Localizable.strings in Resources */,
+				D954C3EF2C0890CA0068B9A7 /* FoodieDB_structure.sql in Resources */,
 				C78DE2A62C008FF40067C844 /* Assets.xcassets in Resources */,
 				D93770CA2C0398840017A894 /* FoodieDB.db in Resources */,
 			);
@@ -373,7 +385,7 @@
 				C78DE2DB2C00A7A30067C844 /* Data.swift in Sources */,
 				D9A36AF42C07796C00E6BADF /* UserLocation.swift in Sources */,
 				D9A36AF22C076B2000E6BADF /* CartViewModel.swift in Sources */,
-				C78DE2A42C008FA20067C844 /* ContentView.swift in Sources */,
+				C78DE2A42C008FA20067C844 /* HomePage.swift in Sources */,
 				C77EA2D92C0108B400BCB908 /* Settings.swift in Sources */,
 				D93770C62C0384930017A894 /* DBManager.swift in Sources */,
 				C78DE2D12C009AF70067C844 /* Shop.swift in Sources */,

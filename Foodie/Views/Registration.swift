@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Registration Page View
+
 struct Registration: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @Environment(\.presentationMode) var presentationMode
@@ -20,6 +22,8 @@ struct Registration: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
+                // MARK: - Registration View inner contents
+                
                 Spacer()
                 VStack(alignment: .leading, spacing: 5) {
                     Text("tELogin")
@@ -90,6 +94,9 @@ struct Registration: View {
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("tErr"), message: Text("alert1"), dismissButton: .default(Text("tok")))
             }
+            
+            // MARK: - Registration View toolbar
+            
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -104,7 +111,9 @@ struct Registration: View {
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
 }
-            
+      
+// MARK: - Registration Page Preview
+
 struct Registration_Previews: PreviewProvider {
     static var previews: some View {
         Registration(isLogged: .constant(false))

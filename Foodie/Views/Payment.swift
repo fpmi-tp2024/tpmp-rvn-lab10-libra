@@ -8,6 +8,8 @@
 import SwiftUI
 import MapKit
 
+// MARK: - Payment Page View
+
 struct Payment: View {
     @AppStorage("isDarkTheme") var isDarkTheme: Bool = false
     @Environment(\.presentationMode) var presentationMode
@@ -24,6 +26,7 @@ struct Payment: View {
     var body: some View {
         NavigationView {
             ScrollView() {
+                // MARK: - Credit Card View
                 VStack {
                     Picker(selection: $selectedIndex, label :Text("")) {
                         Text("lCreditCard").tag(0)
@@ -42,11 +45,15 @@ struct Payment: View {
                 }
                 Spacer()
                     .frame(height: 20)
+                // MARK: - Calendar View
+                
                 //Text("lDate")
                 DatePicker("lDate", selection: $deliveryDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                 Spacer()
                     .frame(height: 20)
+                // MARK: - Map View
+                
                 Map(coordinateRegion: $mapManager.region, showsUserLocation: true,  annotationItems: mapManager.userLocation.map({ mapManager.getClosestLocations(userLocation: $0) }) ?? []) { location in
                     MapMarker(coordinate: location.coordinate)
                 }
@@ -56,6 +63,7 @@ struct Payment: View {
                 .accentColor(.red)
                 .frame(width:300, height:300)
 
+                // MARK: - Address and Comment text inputs
                 if #available(iOS 15.0, *) {
                     TextField("lAdress", text: $address)
                         .padding()
@@ -74,7 +82,8 @@ struct Payment: View {
                 } else {
                     // Fallback on earlier versions
                 }
-                    
+                // MARK: - Pay Button
+                
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(.green)
@@ -111,6 +120,8 @@ struct Payment: View {
                 }
                 
             }
+            // MARK: - Payment View Toolbar
+            
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -125,6 +136,8 @@ struct Payment: View {
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)
     }
 }
+
+// MARK: - Payment Page Preview
 
 struct Payment_Previews: PreviewProvider {
     static var previews: some View {

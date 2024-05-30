@@ -10,6 +10,8 @@ import SQLite3
 import SwiftUI
 
 class DBManager {
+    // MARK: - DBManager methods for accessing database
+    
     static private func getDBPointer() -> OpaquePointer? {
         var databasePointer: OpaquePointer?
         
@@ -51,6 +53,8 @@ class DBManager {
         
         return databasePointer
     }
+    
+    //MARK: - DBManager methods for fetching data from database
     
     static func getItems() -> [[Any]] {
         var shopItems: [[Any]] = []

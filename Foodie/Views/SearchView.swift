@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Search View
+
 struct SearchView : View {
     
     @Binding var searchText: String

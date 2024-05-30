@@ -8,6 +8,8 @@
 import SwiftUI
 
 class SettingsViewModel: ObservableObject {
+    // MARK: - Settings View Observable items
+    
     @Published var email = ""
     @Published var login = ""
     @Published var password = ""
@@ -27,6 +29,8 @@ class SettingsViewModel: ObservableObject {
             isInputEmpty = loginIsEmpty && passwordIsEmpty && emailIsEmpty
         }
     }
+    
+    // MARK: - Methods required for Settings View
     
     func updateUserInfoButtonClick() {
         emailIsEmpty = email.isEmpty
