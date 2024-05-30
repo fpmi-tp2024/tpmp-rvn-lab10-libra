@@ -1,5 +1,16 @@
 # Тестирование приложения Foodie
 
+[Home](index.md)    
+[Функциональные требования](functionalRequirements.md)  
+[Спецификация](specification.md)  
+[Диаграмма файлов приложения](filesSchema.md)   
+[Дополнительная спецификация](dopSpecification.md)  
+[Схема базы данных](databaseSchema.md)        
+[Презентация проекта](projectPresentation.md)  
+[Тестирование](testing.md)
+
+## Описание
+
 Проект включает в себя набор unit и UI тестов для iOS приложения Foodie. Основная цель тестов — проверка корректности работы различных функциональных компонентов приложения, таких как карта, база данных, настройки, поиск, регистрация, оплата и вход в систему.
 
 ## Покрытие тестами
@@ -13,17 +24,12 @@
 Из-за специфики приложения, созданного на SwiftUI, было уделено больше внимания UI тестам. Это позволяет более детально проверить взаимодействие пользователя с интерфейсом и обеспечить стабильную работу приложения.
 
 ## Содержание
-
-- [Тестирование приложения Foodie](#тестирование-приложения-foodie)
-	- [Покрытие тестами](#покрытие-тестами)
-	- [Примечание](#примечание)
-	- [Содержание](#содержание)
-	- [MapManagerTests](#mapmanagertests)
-	- [SettingTests](#settingtests)
-	- [SearchTests](#searchtests)
-	- [RegistrationScreenTests](#registrationscreentests)
-	- [PaymentTests](#paymenttests)
-	- [LoginScreenTests](#loginscreentests)
+- [MapManagerTests](#mapmanagertests)
+- [SettingTests](#settingtests)
+- [SearchTests](#searchtests)
+- [RegistrationScreenTests](#registrationscreentests)
+- [PaymentTests](#paymenttests)
+- [LoginScreenTests](#loginscreentests)
 
 ## MapManagerTests
 
