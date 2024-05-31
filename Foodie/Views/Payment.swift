@@ -67,8 +67,8 @@ struct Payment: View {
                 if #available(iOS 15.0, *) {
                     TextField("lAdress", text: $address)
                         .padding()
-                        .background(Color.mint)
                         .cornerRadius(10)
+                        .border(Color.blue, width: 1)
                 } else {
                     // Fallback on earlier versions
                 }
@@ -77,8 +77,8 @@ struct Payment: View {
                 if #available(iOS 15.0, *) {
                     TextField("lComment", text: $comment)
                         .padding()
-                        .background(Color.mint)
                         .cornerRadius(10)
+                        .border(Color.blue, width: 1)
                 } else {
                     // Fallback on earlier versions
                 }

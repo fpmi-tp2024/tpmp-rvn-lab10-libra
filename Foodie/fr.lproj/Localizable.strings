@@ -95,6 +95,8 @@
 
 "lDate" = "Date et heure de Livraison";
 
+"lChanged" = "Modifié";
+
 // Database values:
 
 "Burger" = "Burger";
