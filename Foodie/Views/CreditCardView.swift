@@ -85,8 +85,11 @@ struct CheckoutFormView: View {
     var body: some View {
         Form {
             TextField("lCardName", text: $creditCardInfo.cardHolderName)
+                .accessibility(identifier: "cardHolderNameTextField")
             TextField("lCardNum", text: $creditCardInfo.cardNumber)
+                .accessibility(identifier: "cardNumberTextField")
             TextField("lCardDate", text: $creditCardInfo.expirationDate)
+                .accessibility(identifier: "expirationDateTextField")
             if #available(iOS 15.0, *) {
                 TextField("lCCV", text: $creditCardInfo.ccvCode)
                     .focused($isCCVFocused)
@@ -94,6 +97,7 @@ struct CheckoutFormView: View {
                         isCCVFocused = true
                         onCCVTapped()
                     }
+                    .accessibility(identifier: "ccvCodeTextField")
             } else {
                 // Fallback on earlier versions
             }

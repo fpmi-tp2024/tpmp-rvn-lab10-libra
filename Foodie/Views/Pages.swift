@@ -19,16 +19,19 @@ struct Pages: View {
                 .tabItem() {
                     Image(systemName: "cart")
                     Text("lMenu")
+                        .accessibility(identifier: "MenuButton")
                 }
             Cart(cartItems: $cartItems)
                 .tabItem() {
                     Image(systemName: "bag")
                     Text("lCart")
+                        .accessibility(identifier: "CartButton")
                 }
             Settings()
                 .tabItem() {
                     Image(systemName: "person")
                     Text("lSettings")
+                        .accessibility(identifier: "SettingsButton")
                 }
         }
         .environment(\.colorScheme, isDarkTheme ? .dark : .light)

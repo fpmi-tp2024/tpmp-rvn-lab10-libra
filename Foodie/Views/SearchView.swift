@@ -18,6 +18,7 @@ struct SearchView : View {
             Image(systemName: "magnifyingglass")
             TextField(NSLocalizedString("tSearch", comment: ""), text :$searchText)
                 .frame(height:50)
+                .accessibility(identifier: "SearchField")
             Button(action: {
                 searchText = ""
             }) {

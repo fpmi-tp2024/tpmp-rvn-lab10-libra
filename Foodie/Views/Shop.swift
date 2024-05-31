@@ -50,10 +50,13 @@ struct Shop: View {
                         Image(systemName: "chevron.left")
                         Text("bBack")
                     }
+                    .accessibility(identifier: "BackButton")
                 }
             }
         }
-
+        .navigationViewStyle(.stack)
+        .accessibility(identifier: "ShopNavigationView")
+        .environment(\.colorScheme, isDarkTheme ? .dark : .light)
         .alert(isPresented: $confirmExit) {
             Alert(title: Text("tConfExit"), message: Text("alert2"), primaryButton: .default(Text("tok")) {
                 cartItems = []

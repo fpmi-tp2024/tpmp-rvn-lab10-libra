@@ -30,7 +30,9 @@ struct Payment: View {
                 VStack {
                     Picker(selection: $selectedIndex, label :Text("")) {
                         Text("lCreditCard").tag(0)
+                            .accessibility(identifier: "PayCardPick")
                         Text("lCash").tag(1)
+                            .accessibility(identifier: "PayCashPick")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
@@ -68,7 +70,10 @@ struct Payment: View {
                     TextField("lAdress", text: $address)
                         .padding()
                         .cornerRadius(10)
+
+                        .accessibility(identifier: "adressTextField")
                         .border(Color.blue, width: 1)
+
                 } else {
                     // Fallback on earlier versions
                 }
@@ -117,6 +122,7 @@ struct Payment: View {
                         }
                     }
                     .offset(x: 80)
+                    .accessibility(identifier: "confirmButton")
                 }
                 
             }

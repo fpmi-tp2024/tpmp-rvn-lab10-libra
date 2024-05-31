@@ -34,6 +34,7 @@ struct Cart: View {
                             Text("$\(String(format: "%.2f", cartItems[item][2] as! Double))")
                                 .foregroundColor(.gray)
                         }
+                        .accessibility(identifier: "\(item)\(cartItems[item][0] as! String)")
                     }
                 }
                 .onDelete{indexSet in
@@ -60,6 +61,7 @@ struct Cart: View {
                         .font(.system(size: 26, weight: .bold))
                         .frame(width: 350, alignment: .leading)
                         .padding(.leading, 60)
+                        .accessibility(identifier: "TotalPriceValue")
                 }
                 Button() {
                     self.showPaymentScreen = true
@@ -72,6 +74,7 @@ struct Cart: View {
                         Text("bPayNow")
                             .foregroundColor(.white)
                             .bold()
+                            .accessibility(identifier: "PayButton")
                     }
                 }
                 .offset(x: 80)

@@ -37,6 +37,7 @@ struct HomePage: View {
                         Text("bLogin")
                             .foregroundColor(.white)
                             .bold()
+                            .accessibility(identifier: "LoginButton")
                     }
                     
                 }
@@ -53,6 +54,7 @@ struct HomePage: View {
                         Text("bRegister")
                             .foregroundColor(.white)
                             .bold()
+                            .accessibility(identifier: "RegisterButton")
                     }
                     
                 }

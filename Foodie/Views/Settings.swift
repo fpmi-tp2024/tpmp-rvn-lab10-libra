@@ -36,6 +36,7 @@ struct Settings: View {
                     Toggle(isOn: $isDarkTheme) {
                         Text("LTheme")
                     }
+                    .accessibility(identifier: "SwitchThemeToggle")
                 }
                 .frame(width: 350)
                 
@@ -49,6 +50,7 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "UpdateLoginField")
 
                 }
                 .frame(width: 350)
@@ -61,6 +63,7 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "UpdateEmailField")
 
                 }
                 .frame(width: 350)
@@ -73,6 +76,7 @@ struct Settings: View {
                         .padding()
                         .cornerRadius(10)
                         .border(Color.blue, width: 1)
+                        .accessibility(identifier: "UpdatePasswordField")
 
                 }
                 .frame(width: 350)
@@ -90,6 +94,7 @@ struct Settings: View {
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(12)
+                        .accessibility(identifier: "UpdateButton")
                 }
                 .alert(isPresented: $showAlert) {
                     settingsViewModel.informUser()
