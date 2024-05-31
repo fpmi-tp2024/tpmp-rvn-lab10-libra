@@ -12,7 +12,7 @@
 Приложение предназначено для заказа доставки еды.
 
 # Общее описание
-Пользователем приложения является клиент, который выполняет заказ. Приложение доступно на устройствах iOS 15.0 и выше.
+Данное приложение является сервисом заказа еды. Пользователь выбирает вид блюда, подтверждает заказ и выбирает способ оплаты (карта или наличные), а так же указывает адрес доставки. Пользователю предлагается автоматически ближайший ресторан, при определении местоположения пользователя. Пользователю доступен комментарий к заказу для детализации или уточнения. Сервис поддерживает регистрацию. Данные регистрации хранятся локально. Данные для меню хранятся в базе данных sqlite. В приложении используются UserDefaults и plist.
 
 # Спецификация требований
 
@@ -61,3 +61,12 @@
 ![Data base schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/c6be41019be8de8aa56a439e9781663bf313a9bb/img/diagrams/db.png?raw=true)
 ## Диаграмма файлов
 ![Files schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/1dde058573206e2963f07c2549f973077fc4a722/img/diagrams/files.jpeg?raw=true)
+
+## Диаграмма компонентов
+![Component schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/d6839e02f8bc6f0a5c776e4280449d8593e7dd4a/img/diagrams/componentFoodie.jpeg?raw=true)
+
+## Диаграмма последовательности
+![Sequence schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/d6839e02f8bc6f0a5c776e4280449d8593e7dd4a/img/diagrams/sequenceFoodie.jpeg?raw=true)
+
+## Диаграмма развёртывания
+![Deployment schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/d6839e02f8bc6f0a5c776e4280449d8593e7dd4a/img/diagrams/foodiedeployment.jpeg?raw=true)
