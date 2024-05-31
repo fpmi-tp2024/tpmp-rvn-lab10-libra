@@ -1,0 +1,108 @@
+/* 
+  Localizable.strings
+  Foodie
+
+  Created by Алина on 27.05.24.
+  
+*/
+
+"tErr" = "Error";
+
+"tFail" = "Failure";
+
+"tSuccess" = "Success";
+
+"alertEmpty" = "Your input was empty";
+
+"alert1" = "There is a mistake in your input. \nCheck if all fields are filled and if passwords are the same";
+
+"tok" = "OK";
+
+"tConfExit" = "Confirm your exit";
+
+"alert2" = "Are you sure you want to quit?\nYour cart will be cleared.";
+
+"alert3" = "There is a mistake in your input. \nCheck if all fields are filled and if your input is correct";
+
+"bConfirm" = "Confirm";
+
+"tEPassword" = "Enter Password";
+
+"tEEmail" = "Enter Email";
+
+"tELogin" = "Enter Login";
+
+"bLogin" = "Login";
+
+"bRegister" = "Register";
+
+"lStart1" = "Savor the Moment: We breing the restaurant to you, order now";
+
+"bBack" = "Back";
+
+"lLogin" = "Login";
+
+"tLogin" = "Login";
+
+"lPassword" = "Password";
+
+"tPassword" = "Password";
+
+"lEmail" = "Email";
+
+"lConfirm" = "Confirm password";
+
+"tSearch" = "Search";
+
+"lMenu" = "Menu";
+
+"lCart" = "Cart";
+
+"lSettings" = "Settings";
+
+"lMyCart" = "My Cart";
+
+"LTotalPrice" = "Total Price";
+
+"bPayNow" = "Pay Now >";
+
+"lCreditCard" = "Credit Card";
+
+"lCash" = "Cash";
+
+"lConfirmPay" = "Confirm Pay";
+
+"lComment" = "Comment...";
+
+"lCardName" = "Cardholder's Name";
+
+"lCardNum" = "Card Nubmer";
+
+"lCardDate" = "Expiry Date";
+
+"lCCV" = "CCV";
+
+"LTheme" = "Dark Theme";
+
+"bUpdateProfile" = "Update Profile";
+
+"lCardNameB" = "CARD HOLDER";
+
+"lCardDateB" = "EXPIRES";
+
+"lAdress" = "Delivery Adress";
+
+"lDate" = "Date and time of delivery";
+
+"lChanged" = "Changed";
+
+// Database values:
+
+"Burger" = "Burger";
+"Coffee" = "Coffee";
+"French Fries" = "French Fries";
+"Fried Chicken" = "Fried Chicken";
+"Hotdog" = "Hotdog";
+"Ice-Cream" = "Ice-Cream";
+"Pizza" = "Pizza";
+"Pork" = "Pork";

@@ -1,0 +1,107 @@
+/* 
+  Localizable.strings
+  Foodie
+
+  Created by Алина on 27.05.24.
+  
+*/
+"bConfirm" = "Confirmer";
+
+"bLogin" = "Connexion";
+
+"bRegister" = "S'inscrire";
+
+"lStart1" = "Savourez le moment: Nous vous apportons le restaurant, commandez maintenant";
+
+"bBack" = "Retour";
+
+"lLogin" = "Connexion";
+
+"tLogin" = "Connexion";
+
+"lPassword" = "Mot de Passe";
+
+"tPassword" = "Mot de Passe";
+
+"lEmail" = "Courriel";
+
+"lConfirm" = "Confirmer";
+
+"tSearch" = "Chercher";
+
+"lMenu" = "Le Menu";
+
+"lCart" = "Panier";
+
+"lSettings" = "Paramétres";
+
+"lMyCart" = "Mon Panier";
+
+"LTotalPrice" = "Prix Total";
+
+"bPayNow" = "Payer";
+
+"lCreditCard" = "Carte de Crédit";
+
+"lCash" = "Espéces";
+
+"lConfirmPay" = "Confirmer";
+
+"lComment" = "Commentaire...";
+
+"lCardName" = "Nom du Détenteur de la carte";
+
+"lCardNum" = "Numéro de Carte";
+
+"lCardDate" = "Date d'Expiration";
+
+"lCCV" = "CVC";
+
+"LTheme" = "Théme Sombre";
+
+"bUpdateProfile" = "Mettre à Jour le Profil";
+
+"lCardNameB" = "Porte-Cartes";
+
+"lCardDateB" = "Expire";
+
+"tEPassword" = "Entrez Le Mot De Passe";
+
+"tEEmail" = "Entrez votre E-Mail";
+
+"tELogin" = "Entrer le Login";
+
+"tErr" = "Erreur";
+
+"tFail" = "Echec";
+
+"tSuccess" = "Succés";
+
+"alertEmpty" = "Votre saisie était vide";
+
+"alert1" = "II y a une erreur dans votre saisie. \nVérifiez si tous les champs sont remplis et si les mots de passe sont identiques";
+
+"tok" = "D'ACCORD";
+
+"tConfExit" = "Confirmez votre sortie";
+
+"alert2" = "Voulez-vouz vraiment arréter?\nVotre panierr sera effacé.";
+
+"alert3" = "II y a une erreur dans votre saisie. \nVérifiez si tous les champs sont remplis et si votre saisie est correcte";
+
+"lAdress" = "Adresse de livraison";
+
+"lDate" = "Date et heure de Livraison";
+
+"lChanged" = "Modifié";
+
+// Database values:
+
+"Burger" = "Burger";
+"Coffee" = "Café";
+"French Fries" = "Frites";
+"Fried Chicken" = "Poulet frit";
+"Hotdog" = "Hot-dog";
+"Ice-Cream" = "Glace";
+"Pizza" = "Pizza";
+"Pork" = "Porc";
