@@ -23,12 +23,11 @@ struct HomePage: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
+                Spacer()
+                    .frame(height:20)
                 Text("lStart1")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.center)
-                Text("lStart2")
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.gray)
                 Button(action: {
                     self.showLoginScreen = true
                 }) {
@@ -45,7 +44,6 @@ struct HomePage: View {
                 .frame(width: 200, height: 35)
                 .fullScreenCover(isPresented: $showLoginScreen) {
                     Login(isLogged: $isLogged)
-                    //Pages()
                 }
                 Button(action: {
                     self.showRegisterScreen = true
