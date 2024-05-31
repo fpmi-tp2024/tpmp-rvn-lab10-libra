@@ -55,7 +55,7 @@
 ![use_case](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/5cf92142b8b793dd6408e8dc3335ca8f5aa26e16/img/diagrams/useCase.jpeg?raw=true)
 
 ## Диаграмма классов
-![class](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/54f2c8f9e8574d1297a5d297b8c7fda60253d635/img/diagrams/class.jpeg?raw=true)
+![class](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/4dbf94b7958bfa4581b11ee9677aee3330fed899/img/diagrams/classImg.jpeg?raw=true)
 
 ## Физическая модель базы данных
 ![Data base schema](https://github.com/fpmi-tp2024/tpmp-rvn-lab10-libra/blob/c6be41019be8de8aa56a439e9781663bf313a9bb/img/diagrams/db.png?raw=true)
