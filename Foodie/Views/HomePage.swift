@@ -23,12 +23,11 @@ struct HomePage: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
+                Spacer()
+                    .frame(height:20)
                 Text("lStart1")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.center)
-                Text("lStart2")
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.gray)
                 Button(action: {
                     self.showLoginScreen = true
                 }) {
