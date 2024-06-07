@@ -1,0 +1,81 @@
+# Xcode
+#
+.DS_Store
+.idea/
+*.swp
+*~
+
+# Xcode
+#
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Xcode 8 and earlier
+#
+*.mode1v3
+*.mode2v3
+*.pbxuser
+
+# Xcode 9 and later
+#
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+
+# Xcode 10 and later
+#
+*.xccheckout
+*.xcscmblueprint
+
+# User-specific files
+#
+*.swp
+*~.nib~
+*.orig
+
+# Objective-C/Swift specific
+#
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+#
+Pods/
+
+# Carthage
+#
+Carthage/Build/
+Carthage/Checkouts/
+Carthage/Pods/
+
+# Accio dependency management
+#
+.accio/
+
+# Swift Package Manager
+#
+Packages/
+.swiftpm/
+.build/
+.build/
+
+# Code Injection
+#
+iOSInjectionProject/
+
+# AppCode
+#
+.idea/
+
+# SPM
+#
+.xcodeproj/project.xcworkspace/xcuserdata/
+.xcworkspace/xcuserdata/
+.xcworkspace/xcshareddata/
+*.swiftpm
